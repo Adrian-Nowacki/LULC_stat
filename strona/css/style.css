@@ -1,0 +1,310 @@
+body, html
+{
+    width: 100%;
+    background-color:  
+	/*#a7bba7;*/
+	#4b6865;
+    font-family: "Source Sans Pro"!important;
+	margin:0;
+	color:#efefef;
+	font-size:16px;
+	overflow-x: hidden;
+}
+h1 {
+	font-weight:350!important;
+	text-align:center;
+	margin:30px 0px;
+}
+h2 {
+	font-weight:150!important;
+	margin:40px 0!important;
+}
+#title
+{
+	padding-top:100px;
+	text-shadow: 2px 3px 2px #777;
+	width:100%;
+	height:350px;
+	border-bottom:4px outset #ddd;
+	text-align:center;
+	font-size:52px;
+    background-image: url("../grafiki_probne/background2.png");
+    background-repeat: no-repeat;
+    background-size:cover;
+    filter: opacity(75%);
+    background-position:0 80%;
+	color:#fff;
+	margin-top:0%;
+}
+
+
+#title .background{
+    filter:contrast(0.1);
+}
+
+#menu
+{
+	width:100%;
+	height:60px;
+	background-color: #222;
+	font-size:18px;
+	color:#eee;
+	text-shadow:2px 2px 5px #222;
+	
+}
+    
+.navbar {
+    text-align: center;
+    color: #fff;
+    font-size: 1.3rem;
+    letter-spacing: 0.05rem;
+    box-shadow: 0 5px 5px 0 rgba(0,0,0,.5);
+}
+.menu_kafelek:hover
+{
+	background-color:#222222!important;
+}
+.menu_kafelkow{
+	padding:12px 24px!important;
+}
+.wykres {
+	position:relative;
+	margin-top:100px;
+}
+.paragraf {
+	margin-top:40px;
+	text-align:justify;
+	text-indent:3.5em;
+}
+h1::after {
+	display:block;
+	position: relative;
+	content : "";
+	left    : 0;
+	bottom  : 0;
+	height  : 1px;
+	width   : 350px; 
+	max-width:350px;
+	border-bottom:1px solid #dddddd;
+	margin:10px auto;
+}
+p {
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+	display: block;
+}
+.wydruk {
+	display: block;
+	max-height: 550px;
+	max-width: 534px;
+}
+#clc {
+	max-width:1000px;
+	max-height:700px;
+}
+.wykres{
+	height: 354px;
+	width: 500px;
+}
+
+.maps{
+	height:410px;
+	width:534px;
+	float:left;
+	margin-top:30px;
+}
+
+.maps_text{
+	text-align:center;
+	font-weight:150;
+	float:left;
+	height:20px;
+	width:534px;
+	padding-top:10px
+}
+
+@media screen and (max-width: 600px) {
+	#clc {
+		width:350px!important;
+		height:275px!important;
+	}
+	.wydruk {
+		width:370px!important;
+		height:275px!important;
+		
+	}
+	.maps{
+		width:370px!important;
+		height:295px!important;
+	}
+	.maps_text{
+		width:370px!important;
+		
+	}
+	.wykres{
+		height: 290px!important;
+		width: 370px!important;
+		float:left!important;
+	}
+	#procent{
+		bottom: 15px!important;
+    	left: 15px!important;
+	}
+	#title{
+		padding-top:70px!important;
+		font-size:28px!important;
+	}
+	
+  }
+
+
+@media screen and (max-width: 800px) {
+	#title{
+		padding-top:85px;
+		font-size:31px;
+	}
+}
+
+
+@media screen and (max-width: 1000px) {
+	#statystyki_tabela{
+		overflow-x: auto;
+	  }
+}
+
+
+  #procent{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 25px;
+    left: 40px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+    display: grid;
+    place-items: center;
+}
+#procent-value{
+    display: block;
+    height: calc(100% - 10px);
+    width: calc(100% - 10px);
+    background-color: #222222;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-weight: 250;
+    font-size: 14px;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background-image: -webkit-gradient(linear, left bottom, left top, 
+						color-stop(0.28, #1e9477 ), 
+						color-stop(0.60, #3fab90 ), 
+						color-stop(0.86, #68c0aa));
+}
+::-webkit-scrollbar-track {
+    display: none;
+}
+
+.hidden_menu{
+	display:block!important;
+}
+
+tr {
+	text-align: center!important;
+}
+
+table {
+	width: 70vw!important;
+	font-size: 80%!important;
+	max-width: 1100px!important;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+  }
+
+  table td {
+	border: 1.5px solid rgba(55, 122, 144, 0.8); 
+	text-align: left!important;
+  }
+  table tr:first-child td {
+	border-top: 0;
+  }
+  table tr td:first-child {
+	border-left: 0;
+  }
+  table tr:last-child td {
+	border-bottom: 0;
+  }
+  table tr td:last-child {
+	border-right: 0;
+  }
+
+
+
+
+#statystyki_tabela::-webkit-scrollbar {
+ height: 8px!important;
+}
+
+#statystyki_tabela::-webkit-scrollbar-thumb {
+    background-image: -webkit-gradient(linear, left bottom, left top, 
+						color-stop(0.28, #1e9477 ), 
+						color-stop(0.60, #3fab90 ), 
+						color-stop(0.86, #68c0aa));
+}
+
+#statystyki_tabela::-webkit-scrollbar-track {
+    display: none;
+}
+
+  .autor1{
+	padding: 100px;
+
+  }
+
+
+
+
+  #autor_img{
+  float: left;
+  margin-top: 30px;
+  display:block;
+  text-align:center;
+  }
+
+  #autor_inf{
+	font-size: 16px;
+	text-align: justify;
+	margin-top: 60px;
+	display:block;
+	float: center;
+	text-indent:3.5em;
+  }
+
+footer {
+	width:100%!important;
+	margin-top:150px;
+	background-color:#333;
+	box-shadow:         inset 0px 7px 3px -3px rgba(10, 10, 10, 0.75);
+}
+  footer a {
+	text-decoration:none!important;
+	transition: ease 0.5s!important;
+  }
+  footer a:hover{
+	color:#ffffff!important;
+	transition: ease 0.5s!important;
+  }
+  #autor_inf a{
+	text-decoration:none!important;
+	transition: ease 0.5s!important;
+  }
+  .img-authors{
+	border-radius:50%;
+	box-shadow: 5px 5px 12px 1px #151515;
+  }
