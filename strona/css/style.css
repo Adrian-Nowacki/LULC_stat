@@ -240,7 +240,7 @@ table {
   }
 
   table td {
-	border: 1.5px solid rgba(55, 122, 144, 0.8); 
+	border: 1.5px solid #264d40; 
 	text-align: left!important;
   }
   table tr:first-child td {
@@ -255,7 +255,18 @@ table {
   table tr td:last-child {
 	border-right: 0;
   }
-
+ .bordered > :nth-child(3n + 1) {
+	border-right: 3px solid rgb(30, 30, 30);
+  }
+  .bordered td:first-child, .bordered th:first-child {
+	border-right: 5px solid rgb(30, 30, 30);
+  }
+  .bordered_2 td:first-child, .bordered_2 th:first-child{
+	border-right: 5px solid rgb(30, 30, 30);
+  }
+  .bordered_2 td:nth-child(3n), .bordered_2 th:nth-child(3n){
+	border-right: 3px solid rgb(30, 30, 30);
+  }
 #statystyki_tabela{
 	overflow-x: auto;
 	margin-left: auto;
