@@ -179,122 +179,388 @@
     <table class = "sortable">
      <thead>
        <tr>
-         <th>POKRYCIE TERENU</th>
-         <th>ŚREDNIE NDVI</th>
-         <th>ŚREDNIA TEMPERATURA</th>
-         <th>MIN. NDVI</th>
-         <th>MIN. TEMPERATURA</th>
-         <th>MAKS. NDVI</th>
-         <th>MAKS. TEMPERATURA</th>
-         <th>LICZBA </th>
+         <th>ŹRÓDŁO POKRYCIA TERENU</th>
+         <th>AGLOMERACJA ŚREDNIA</th>
+         <th>AGLOMERACJA KAPPA</th>
+         <th>POZNAŃ ŚREDNIA</th>
+         <th>POZNAŃ KAPPA</th>
        </tr>
      </thead>
      <tbody>
        <tr>
-         <td>zabudowa miejska</td>
-         <td>0,24</td>
-         <td>27,8</td>
-         <td>-0,07</td>
-         <td>21,7</td>
-         <td>0,60</td>
-         <td>34,1</td>
-         <td>2708</td>
+         <td>LUCAS</td>
+         <td>0,802</td>
+         <td>0,713</td>
+         <td>0,693</td>
+         <td>0,590</td>
        </tr>
        <tr>
-         <td>tereny sportowe i rekreacyjne</td>
-         <td>0,36</td>
-         <td>26,7</td>
-         <td>0,07</td>
-         <td>24,5</td>
-         <td>0,59</td>
-         <td>29,3</td>
-         <td>440</td>
+         <td>ESA</td>
+         <td>0,786</td>
+         <td>0,695</td>
+         <td>0,644</td>
+         <td>0,535</td>
        </tr>
        <tr>
-         <td>łąki i pastwiska</td>
-         <td>0,50</td>
-         <td>23,9</td>
-         <td>0,01</td>
-         <td>22,3</td>
-         <td>0,62</td>
-         <td>29,3</td>
-         <td>355</td>
+         <td>Esri</td>
+         <td>0,787</td>
+         <td>0,691</td>
+         <td>0,660</td>
+         <td>0,545</td>
        </tr>
        <tr>
-         <td>obszary rolnicze</td>
-         <td>0,42</td>
-         <td>22</td>
-         <td>-0,05</td>
-         <td>19,9</td>
-         <td>0,56</td>
-         <td>27,9</td>
-         <td>456</td>
+         <td>Sentinel-2</td>
+         <td>0,754</td>
+         <td>0,658</td>
+         <td>0,628</td>
+         <td>0,530</td>
        </tr>
        <tr>
-         <td>lasy liściaste</td>
-         <td>0,48</td>
-         <td>22,3</td>
-         <td>-0,15</td>
-         <td>18,4</td>
-         <td>0,61</td>
-         <td>29,9</td>
-         <td>16 174</td>
+         <td>CLC</td>
+         <td>0,771</td>
+         <td>0,668</td>
+         <td>0,636</td>
+         <td>0,508</td>
        </tr>
        <tr>
-         <td>lasy iglaste</td>
-         <td>0,40</td>
-         <td>22,8</td>
-         <td>-0,04</td>
-         <td>19,4</td>
-         <td>0,58</td>
-         <td>28,2</td>
-         <td>22 718</td>
-       </tr>
-       <tr>
-         <td>lasy mieszane</td>
-         <td>0,45</td>
-         <td>22,5</td>
-         <td>-0,06</td>
-         <td>19,5</td>
-         <td>0,61</td>
-         <td>29,9</td>
-         <td>16 264</td>
-       </tr>
-       <tr>
-         <td>bagna śródlądowe</td>
-         <td>0,37</td>
-         <td>23,6</td>
-         <td>-0,11</td>
-         <td>18,2</td>
-         <td>0,59</td>
-         <td>31,1</td>
-         <td>14 494</td>
-       </tr>
-       <tr>
-         <td>obszary wodne</td>
-         <td>-0,02</td>
-         <td>18,3</td>
-         <td>-0,19</td>
-         <td>16,6</td>
-         <td>0,57</td>
-         <td>24</td>
-         <td>20 573</td>
-       </tr>
-       <tr>
-         <td>morze</td>
-         <td>-0,04</td>
-         <td>15,3</td>
-         <td>-0,23</td>
-         <td>14,2</td>
-         <td>0,54</td>
-         <td>23,9</td>
-         <td>31 117</td>
+         <td>Urban Atlas</td>
+         <td>0,742</td>
+         <td>0,644</td>
+         <td>0,706</td>
+         <td>0,601</td>
        </tr>
      </tbody>
      </table>
  
  
  </div>
+
+ <p class='img_text' style = "text-align:center;"><b>Tabela 2. Statystyki dla aglomeracji</b></p> 
+
+ <div id = "statystyki_tabela">
+
+  <table class = "sortable">
+   <thead>
+     <tr>
+       <th>POKRYCIE TERENU</th>
+       <th>lucas_PA</th>
+       <th>lucas_UA</th>
+       <th>lucas_F1</th>
+       <th>esa_PA</th>
+       <th>esa_UA</th>
+       <th>esa_F1</th>
+       <th>esri_PA</th>
+       <th>esri_UA</th>
+       <th>esri_F1</th>
+       <th>sent_PA</th>
+       <th>sent_UA</th>
+       <th>sent_F1</th>
+       <th>clc_PA</th>
+       <th>clc_UA</th>
+       <th>clc_F1</th>
+       <th>urban_PA</th>
+       <th>urban_UA</th>
+       <th>urban_F1</th>
+     </tr>
+   </thead>
+    <tbody>
+      <tr>
+        <td>Obszary podmokłe</td>
+        <td>0,11</td>
+        <td>0,55</td>
+        <td>0,19</td>
+        <td>0,16</td>
+        <td>0,58</td>
+        <td>0,25</td>
+        <td>0,01</td>
+        <td>0,31</td>
+        <td>0,01</td>
+        <td>0,51</td>
+        <td>0,09</td>
+        <td>0,15</td>
+        <td>0,07</td>
+        <td>0,39</td>
+        <td>0,12</td>
+        <td>0,01</td>
+        <td>0,47</td>
+        <td>0,02</td>
+      </tr>
+      <tr>
+        <td>Obszary wodne</td>
+        <td>0,70</td>
+        <td>0,91</td>
+        <td>0,79</td>
+        <td>0,74</td>
+        <td>0,93</td>
+        <td>0,83</td>
+        <td>0,82</td>
+        <td>0,86</td>
+        <td>0,84</td>
+        <td>0,52</td>
+        <td>0,97</td>
+        <td>0,68</td>
+        <td>0,52</td>
+        <td>0,90</td>
+        <td>0,66</td>
+        <td>0,75</td>
+        <td>0,93</td>
+        <td>0,83</td>
+      </tr>
+      <tr>
+        <td>Zabudowa</td>
+        <td>0,75</td>
+        <td>0,64</td>
+        <td>0,69</td>
+        <td>0,54</td>
+        <td>0,74</td>
+        <td>0,62</td>
+        <td>0,88</td>
+        <td>0,52</td>
+        <td>0,65</td>
+        <td>0,73</td>
+        <td>0,62</td>
+        <td>0,67</td>
+        <td>0,73</td>
+        <td>0,55</td>
+        <td>0,63</td>
+        <td>0,87</td>
+        <td>0,65</td>
+        <td>0,74</td>
+      </tr>
+      <tr>
+        <td>Lasy</td>
+        <td>0,92</td>
+        <td>0,87</td>
+        <td>0,89</td>
+        <td>0,97</td>
+        <td>0,70</td>
+        <td>0,81</td>
+        <td>0,94</td>
+        <td>0,87</td>
+        <td>0,90</td>
+        <td>0,91</td>
+        <td>0,87</td>
+        <td>0,89</td>
+        <td>0,87</td>
+        <td>0,86</td>
+        <td>0,87</td>
+        <td>0,90</td>
+        <td>0,87</td>
+        <td>0,89</td>
+      </tr>
+      <tr>
+        <td>Obszary trawiaste i krzewiaste</td>
+        <td>0,37</td>
+        <td>0,57</td>
+        <td>0,45</td>
+        <td>0,48</td>
+        <td>0,55</td>
+        <td>0,51</td>
+        <td>0,11</td>
+        <td>0,74</td>
+        <td>0,19</td>
+        <td>0,33</td>
+        <td>0,56</td>
+        <td>0,41</td>
+        <td>0,31</td>
+        <td>0,52</td>
+        <td>0,39</td>
+        <td>0,49</td>
+        <td>0,37</td>
+        <td>0,42</td>
+      </tr>
+      <tr>
+        <td>Pola uprawne</td>
+        <td>0,93</td>
+        <td>0,86</td>
+        <td>0,89</td>
+        <td>0,87</td>
+        <td>0,95</td>
+        <td>0,91</td>
+        <td>0,94</td>
+        <td>0,85</td>
+        <td>0,89</td>
+        <td>0,85</td>
+        <td>0,89</td>
+        <td>0,87</td>
+        <td>0,93</td>
+        <td>0,84</td>
+        <td>0,88</td>
+        <td>0,73</td>
+        <td>0,89</td>
+        <td>0,80</td>
+      </tr>
+   </tbody>
+   </table>
+
+
+</div>
+
+<p class='img_text' style = "text-align:center;"><b>Tabela 3. Statystyki dla Poznania</b></p> 
+
+ <div id = "statystyki_tabela">
+
+  <table class = "sortable">
+   <thead>
+     <tr>
+       <th>POKRYCIE TERENU</th>
+       <th>lucas_PA</th>
+       <th>lucas_UA</th>
+       <th>lucas_F1</th>
+       <th>esa_PA</th>
+       <th>esa_UA</th>
+       <th>esa_F1</th>
+       <th>esri_PA</th>
+       <th>esri_UA</th>
+       <th>esri_F1</th>
+       <th>sent_PA</th>
+       <th>sent_UA</th>
+       <th>sent_F1</th>
+       <th>clc_PA</th>
+       <th>clc_UA</th>
+       <th>clc_F1</th>
+       <th>urban_PA</th>
+       <th>urban_UA</th>
+       <th>urban_F1</th>
+     </tr>
+   </thead>
+    <tbody>
+      <tr>
+        <td>Obszary podmokłe</td>
+        <td>0,16</td>
+        <td>0,47</td>
+        <td>0,24</td>
+        <td>0,19</td>
+        <td>0,50</td>
+        <td>0,27</td>
+        <td>0,02</td>
+        <td>0,16</td>
+        <td>0,04</td>
+        <td>0,65</td>
+        <td>0,03</td>
+        <td>0,05</td>
+        <td>0,11</td>
+        <td>0,19</td>
+        <td>0,14</td>
+        <td>0,00</td>
+        <td>-</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>Obszary wodne</td>
+        <td>0,70</td>
+        <td>0,94</td>
+        <td>0,80</td>
+        <td>0,75</td>
+        <td>0,97</td>
+        <td>0,84</td>
+        <td>0,84</td>
+        <td>0,90</td>
+        <td>0,87</td>
+        <td>0,54</td>
+        <td>1,00</td>
+        <td>0,70</td>
+        <td>0,54</td>
+        <td>0,92</td>
+        <td>0,68</td>
+        <td>0,81</td>
+        <td>0,97</td>
+        <td>0,88</td>
+      </tr>
+      <tr>
+        <td>Zabudowa</td>
+        <td>0,86</td>
+        <td>0,69</td>
+        <td>0,77</td>
+        <td>0,61</td>
+        <td>0,81</td>
+        <td>0,70</td>
+        <td>0,96</td>
+        <td>0,57</td>
+        <td>0,72</td>
+        <td>0,82</td>
+        <td>0,74</td>
+        <td>0,78</td>
+        <td>0,87</td>
+        <td>0,61</td>
+        <td>0,72</td>
+        <td>0,92</td>
+        <td>0,69</td>
+        <td>0,79</td>
+      </tr>
+      <tr>
+        <td>Lasy</td>
+        <td>0,81</td>
+        <td>0,81</td>
+        <td>0,81</td>
+        <td>0,97</td>
+        <td>0,44</td>
+        <td>0,60</td>
+        <td>0,87</td>
+        <td>0,81</td>
+        <td>0,84</td>
+        <td>0,88</td>
+        <td>0,74</td>
+        <td>0,81</td>
+        <td>0,61</td>
+        <td>0,80</td>
+        <td>0,69</td>
+        <td>0,77</td>
+        <td>0,78</td>
+        <td>0,77</td>
+      </tr>
+      <tr>
+        <td>Obszary trawiaste i krzewiaste</td>
+        <td>0,38</td>
+        <td>0,62</td>
+        <td>0,47</td>
+        <td>0,40</td>
+        <td>0,73</td>
+        <td>0,52</td>
+        <td>0,12</td>
+        <td>0,84</td>
+        <td>0,21</td>
+        <td>0,23</td>
+        <td>0,76</td>
+        <td>0,35</td>
+        <td>0,34</td>
+        <td>0,52</td>
+        <td>0,41</td>
+        <td>0,46</td>
+        <td>0,62</td>
+        <td>0,53</td>
+      </tr>
+      <tr>
+        <td>Pola uprawne</td>
+        <td>0,86</td>
+        <td>0,61</td>
+        <td>0,71</td>
+        <td>0,77</td>
+        <td>0,90</td>
+        <td>0,83</td>
+        <td>0,85</td>
+        <td>0,66</td>
+        <td>0,74</td>
+        <td>0,74</td>
+        <td>0,64</td>
+        <td>0,69</td>
+        <td>0,85</td>
+        <td>0,66</td>
+        <td>0,74</td>
+        <td>0,66</td>
+        <td>0,73</td>
+        <td>0,70</td>
+      </tr>
+   </tbody>
+   </table>
+
+
+</div>
+
+
+
+
+
 
 <div class = "w3-row-padding w3-padding-32 w3-container w3-content" style = "max-width:1100px">
   <h1>Wnioski i podsumowanie</h1>
