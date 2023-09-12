@@ -218,36 +218,37 @@
 
   </br></br></br></br>
      <h2>Porównanie dokładności klasyfikacji </h2>
-     <p class = "paragraf">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel maximus mauris, id hendrerit massa. 
-      Vivamus commodo leo quis diam venenatis, nec cursus dui consequat. Nullam ante augue, condimentum quis feugiat quis, 
-      viverra vulputate metus. Ut a maximus odio. Sed quis lacinia metus. Sed mollis, nisl sit amet ultrices maximus, lectus 
-      felis porttitor ipsum, ut iaculis risus quam non quam. Nullam eu laoreet erat. 
+     <p class = "paragraf">W celu oceny jakości i dokładności każdego źródła pokrycia terenu, przeprowadzono analizę przy użyciu
+       macierzy przejść. Metoda ta pozwala na porównanie wyników klasyfikacji z danymi referencyjnymi - w tym przypadku z
+       Bazą Danych Obiektów Topograficznych (BDOT). Macierz błędów umożliwia określenie dokładności 
+       odwzorowania rzeczywistego stanu terenu oraz błędów i rozbieżności występujących w klasyfikacji.
+       W celu przedstawienia najbliższego pod względem dokładności klasyfikacji źródła pokrycia terenu, posłużono się proporcją
+       pikseli sklasyfikowanych poprawnie do liczby wszystkich występujących pikseli, a także wskaźnikiem Kappa - miarą
+       pozwalającą określić stopień zgodności pomiędzy reklasyfikacjami, uwzględniającą przypadkowe zgodności i błędy.
+      </p>
+
+      <p class = "paragraf">Najdokładniejszym zasobem w obu obszarach (powiecie poznańskim oraz mieście Poznań) okazał się LUCAS, 
+        o dokładności 0,80 i Kappa wynoszącym 0,73. Najsłabszym natomiast - Urban Atlas, z dokładnością i kappa wynoszącym odpowiednio 0,74 i 0,64.
+      Obszar miasta Poznania najdokładniej względem BDOT został sklasyfikowany przez ten sam zasób - Urban Atlas (dokładność: 0,71, Kappa: 0,6),
+      czyli projekt obejmujący pokrycie terenu głównie miejskich obszarów. Najmniej dokładnym zasobem w powiecie Poznań okazał się Sentinel-2,
+       o dokładności wynoszącej jedynie 0,63 i wskaźniku Kappa równym 0,53.
     </p>
-      <div class = "maps">   
-        <img class = "podwojne_wykresy" style = "float:right" src = "grafiki/wykresy/error_matrix/error_aglo.png">
-        <p class = "maps_text">Ryc. 6 Rozkład przestrzenny temperatury</p>
-     </div>
-     <div class = "maps">   
-      <img class = "podwojne_wykresy" style = "float:right"src = "grafiki/wykresy/error_matrix/error_poznan.png">
-      <p class = "maps_text">Ryc. 6 Rozkład przestrzenny temperatury</p>
-   </div>
+    
+  
+    <p class='img_text' style = "text-align:center;">
+        <b>Tabela 1. Statystyki obu zmiennych w podziale na kategorię zagospodarowania terenu</b>
+    </p>
 
-
-     <span style = "clear:both;display:block"></span> 
-  </br></br>   
-  </div>
-
-  <p class='img_text' style = "text-align:center;"><b>Tabela 1. Statystyki obu zmiennych w podziale na kategorię zagospodarowania terenu</b></p>
   <div id = "statystyki_tabela">
 
     <table class = "sortable">
       <thead>
         <tr class = "bordered_2">
           <th>ŹRÓDŁO POKRYCIA TERENU</th>
-          <th>AGLOMERACJA ŚREDNIA</th>
-          <th>AGLOMERACJA KAPPA</th>
-          <th>POZNAŃ ŚREDNIA</th>
-          <th>POZNAŃ KAPPA</th>
+          <th>AGLOMERACJA - DOKŁADNOŚĆ</th>
+          <th>AGLOMERACJA - KAPPA</th>
+          <th>POZNAŃ - DOKŁADNOŚĆ</th>
+          <th>POZNAŃ - KAPPA</th>
         </tr>
       </thead>
       <tbody>
@@ -295,9 +296,28 @@
         </tr>
       </tbody>
       </table>
-  
-  
   </div>
+
+  <p class = "paragraf">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel maximus mauris, id hendrerit massa. 
+    Vivamus commodo leo quis diam venenatis, nec cursus dui consequat. Nullam ante augue, condimentum quis feugiat quis, 
+    viverra vulputate metus. Ut a maximus odio. Sed quis lacinia metus. 
+  </p>
+
+      <div class = "maps">   
+        <img class = "podwojne_wykresy" style = "float:right" src = "grafiki/wykresy/error_matrix/error_aglo.png">
+        <p class = "maps_text">Ryc. 6 Rozkład przestrzenny temperatury</p>
+     </div>
+     <div class = "maps">   
+      <img class = "podwojne_wykresy" style = "float:right"src = "grafiki/wykresy/error_matrix/error_poznan.png">
+      <p class = "maps_text">Ryc. 6 Rozkład przestrzenny temperatury</p>
+   </div>
+
+
+     <span style = "clear:both;display:block"></span> 
+  </br></br>   
+  </div>
+
+  
  
   <p class='img_text' style = "text-align:center;"><b>Tabela 2. Statystyki dla aglomeracji</b></p> 
  
