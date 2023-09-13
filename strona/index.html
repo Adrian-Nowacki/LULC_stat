@@ -162,15 +162,16 @@
       sapien orci, vehicula sit amet hendrerit eu, congue sed nibh. In hac habitasse platea dictumst. Donec ac ullamcorper sem.
     </p>
 
-
-    <div class = "maps">
+    <iframe class = "wykres" style = "float:left" frameborder="0" scrolling="no" modebar = "false" src="grafiki/wykresy_interaktywne/udzial_pokrycia_aglo.html"></iframe>
+    <iframe class = "wykres"  style = "float:right" frameborder="0" scrolling="no" src="grafiki/wykresy_interaktywne/udzial_pokrycia_poznan.html"></iframe>
+    <!--<div class = "maps">
       <img class = "podwojne_wykresy" style = "float:right" src = "grafiki/wykresy/udzial_pokrycia/procent_aglo.png">
       <p class = "maps_text">Ryc. 3 Mapa rozkładu temperatury w Międzyzdrojach</p>
     </div>
     <div class = "maps">
       <img class = "podwojne_wykresy" style = "float:right" src = "grafiki/wykresy/udzial_pokrycia/procent_poznan.png">
       <p class = "maps_text">Ryc. 3 Mapa rozkładu temperatury w Międzyzdrojach</p>
-    </div>
+    </div>-->
 
 
 
@@ -196,14 +197,17 @@
     <p style = "text-align:center; font-weight:150">Ryc. 1 Mapa kategorii pokrycia terenu</p>
    </div>
 
-   <div class = "maps">
+
+   <iframe class = "wykres" style = "float:left" frameborder="0" scrolling="no" modebar = "false" src="grafiki/wykresy_interaktywne/zgodnosc_aglo.html"></iframe>
+   <iframe class = "wykres"  style = "float:right" frameborder="0" scrolling="no" src="grafiki/wykresy_interaktywne/zgodnosc_poznan.html"></iframe>
+   <!--<div class = "maps">
     <img class = "podwojne_wykresy" style = "float:right" src = "grafiki/wykresy/zgodnosc/zgodnosc_aglomeracja.png">
     <p class = "maps_text">Ryc. 3 Mapa rozkładu temperatury w Międzyzdrojach</p>
   </div>
   <div class = "maps">
     <img class = "podwojne_wykresy" style = "float:right" src = "grafiki/wykresy/zgodnosc/zgodnosc_poznan.png">
     <p class = "maps_text">Ryc. 3 Mapa rozkładu temperatury w Międzyzdrojach</p>
-  </div>
+  </div>-->
 
 
          <span style = "clear:both;display:block"></span> 
@@ -313,18 +317,25 @@
   pokrycie powiatu poznańskiego zajmowane przez lasy (ponad 25 % powiatu) oraz pola uprawne (44 %), a także przede wszystkim ich złożoność przestrzenną,
   klasy te w przypadku aglomeracji również wyróżniają się niskim błędem klasyfikacji - odpowiednio jedynie 0,16 i 0,12.
   </p>
-      <div class = "maps">   
+
+
+  <iframe class = "wykres" style = "float:left" frameborder="0" scrolling="no" modebar = "false" src="grafiki/wykresy_interaktywne/error_aglo.html"></iframe>
+  <iframe class = "wykres"  style = "float:right" frameborder="0" scrolling="no" src="grafiki/wykresy_interaktywne/error_poznan.html"></iframe>
+      <!--<div class = "maps">   
         <img class = "podwojne_wykresy" style = "float:right" src = "grafiki/wykresy/error_matrix/error_aglo.png">
         <p class = "maps_text">Ryc. 6 Rozkład przestrzenny temperatury</p>
      </div>
      <div class = "maps">   
       <img class = "podwojne_wykresy" style = "float:right"src = "grafiki/wykresy/error_matrix/error_poznan.png">
       <p class = "maps_text">Ryc. 6 Rozkład przestrzenny temperatury</p>
-   </div>
-
-
+   </div>-->
      <span style = "clear:both;display:block"></span> 
-  </br></br>   
+  <p class = "paragraf">W celu przedstawienia szczegółowych statystyk zgodności poszczególnych klas pokrycia terenu dla każdego źródła, na
+     podstawie macierzy przejść obliczono precyzję (ang. <em>precision</em>), czułość (ang. <em>recall</em>), a także wskaźnik F1 (ang. <em>F1 - score</em>). Precyzja
+     odnosi się do procentu obszarów, w jakim dana klasa źródła danych zgadza się z tą samą klasą źródła referencyjnego (BDOT) - czułość
+     natomiast określa procent, w jakim dana klasa źródła referencyjnego (BDOT) zgadza się z tą samą klasą źródła danych. Wskaźnik F1 to
+     średnia harmoniczna pomiędzy precyzją i czułością - im jego wartość jest większa, tym lepsze odwzorowanie danej klasyfikacji względem źródła referencyjnego.
+    </p> 
   </div>
 
   

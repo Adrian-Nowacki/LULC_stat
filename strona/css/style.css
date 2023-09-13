@@ -69,7 +69,9 @@ h2 {
 }
 .wykres {
 	position:relative;
-	margin-top:100px;
+	margin-top:20px;
+	height: 440px;
+	width: 530px;
 }
 .paragraf {
 	margin-top:40px;
@@ -118,10 +120,7 @@ p {
 	max-width:700px;
 	max-height:570px;
 }
-.wykres{
-	height: 354px;
-	width: 500px;
-}
+
 
 .maps{
 	height:490px;
