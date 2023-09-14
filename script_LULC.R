@@ -1,42 +1,3 @@
-setwd("E:/Projekty/projekty_22_23/LULC_stat/siatka/przyciete/ostateczne/koncowe")
-
-##Producer and user accuracy:
-
-# Producer accuracy
-# uncomment lines to run them
-# PA <- diag / colsums
-# # User accuracy
-# UA <- diag / rowsums
-# (outAcc <- data.frame(producerAccuracy = PA, userAccuracy = UA))
-# 
-# 
-# 
-# (455/34500000) *100
-# 
-# ######
-# 
-# (a <- table(values(bdot_ut)))
-# (b <- table(values(lucas)))
-# 
-# a<- as.data.frame(a)
-# a <- as.factor(a)
-# 
-# b <- as.data.frame(clc)
-# b<- as.factor(b)
-# sum(a[1:6]) - sum(b[1:6])
-# 
-# lucas_2 <- rast("lucas.tif")
-# bdot_2 <- rast("bdot.tif")
-# plot(lucas)
-
-
-
-
-
-
-
-
-
 
 
 ########MAPA ZGODNOSCI
@@ -50,6 +11,7 @@ library(sf)
 library(ggplot2)
 library(tibble)
 library(tidyr)
+library(plotly)
 
 lc_names <- c("bdot", "lucas", "esa", "esri", "sent", "clc", "urban")
 
@@ -297,32 +259,30 @@ PA_matrix_aglo %>%
 
 
 
-#### STYL DLA WYKRESÓW ####
+#### STYL DLA WYKRESÓW - artykuł####
 styl <- function(){
   style <<- theme(
     text = element_text(family = "Calibri"),
     panel.grid.major.x = element_blank(),
-    plot.background = element_rect(fill = "#4b6865"),
-    panel.background = element_rect(fill = "#4b6865"), 
-    axis.title = element_text(size = 26,
-                              color = "#ffffff"), 
+    plot.background = element_rect(fill = "#ffffff", color = NA),
+    panel.background = element_rect(fill = "#ffffff"), 
+    axis.title = element_text(size = 16,
+                              color = "#222222"), 
     axis.title.y = element_text(vjust= 2.2),
     plot.title = element_text(size = 16,
-                              color = "#ffffff",
+                              color = "#222222",
                               vjust = 2,
                               hjust = 0.5), 
-    legend.background = element_rect(color = "#ffffff", 
-                                     fill = "#4b6865"),
-    legend.title = element_text(size = 16,  color = "#ffffff"),
-    legend.text = element_text(size = 14, color = "#ffffff"),
-    axis.text = element_text(size = 24, 
-                             color = "#ffffff"),
-    axis.text.x = element_text(angle = 0, vjust = 6.5, hjust=1),
+    legend.title = element_text(size = 16,  color = "#222222"),
+    legend.text = element_text(size = 14, color = "#222222"),
+    axis.text = element_text(size = 14, 
+                             color = "#222222"),
+    axis.text.x = element_text(angle = 0, vjust = 8, hjust=0.5),
     legend.spacing.y = unit(0.2, 'cm'),
     legend.key = element_blank(),
-    plot.background = element_rect(color = NA),
     legend.background = element_rect(fill = "transparent", color = "transparent"),
-    plot.margin = margin(10, 10, 10, 10))
+    plot.margin = margin(10, 10, 10, 10),
+    panel.grid = element_line(color = "#222222"))
   
 }
 styl()
@@ -336,14 +296,50 @@ result_df <- as.data.frame(result)
 
 value_counts <- table(result_df)
 value_counts <- as.data.frame(round(( value_counts / 20681815) * 100, 2))
-
 colors <- c("#d73027", "#f46d43", "#fdae61", "#ffffbf", "#d9ef8b", "#66bd63", "#1a9850")
-ggplot(data = value_counts, aes(x = result_df, y = Freq, fill = result_df)) +
-  geom_bar(stat = "identity", color = "#222222") + 
-  scale_fill_manual(values = colors) +
-  xlab("Liczba źródeł pokrycia terenu zgodnych z BDOT") + 
-  ylab("Procentowy udział na całym obszarze") + style + theme(legend.position = "none")
 
+#styl_inter <- function(){
+  style <<- theme(
+    text = element_text(family = "Calibri"),
+    panel.grid.major.x = element_blank(),
+    plot.background = element_rect(fill = "#4b6865", color = NA),
+    panel.background = element_rect(fill = "#4b6865"), 
+    axis.title = element_text(size = 12,
+                              color = "#ffffff"), 
+    axis.title.y = element_text(vjust= 2.2),
+    plot.title = element_text(size = 8,
+                              color = "#ffffff",
+                              vjust = 2,
+                              hjust = 0.5), 
+    legend.margin = margin(t = -15, r = 7, l = 7, b  = 7),
+    legend.title = element_text(size = 10,  color = "#ffffff"),
+    legend.text = element_text(size = 6, color = "#ffffff"),
+    axis.text = element_text(size = 10, 
+                             color = "#ffffff"),
+    axis.text.x = element_text(angle = 0, vjust = 1.2, hjust=1),
+    legend.spacing.y = unit(0.01, 'cm'),
+    legend.position = "right",
+    legend.key.size = unit(0.01, "cm"),
+    legend.background = element_rect(fill = "transparent", color = "transparent"),
+    plot.margin = margin(10, 10, -40, 10))
+}
+#styl_inter()
+
+wykres <- ggplot(data = value_counts, aes(x = result_df, y = Freq, fill = result_df)) + #text = paste('<span style = " font-weight:bold">Liczba zgodności:</span>',
+                                                                                     #             '<span>',result_df ,'</span>',
+                                                                                     #             '</br></br><span style = " font-weight:bold">Udział procentowy:</span>',
+                                                                                     #             '<span>',paste(Freq, "%") ,'</span>'))) +
+          geom_bar(stat = "identity", color = "#222222") + 
+          scale_fill_manual(values = colors) +
+          xlab("Liczba źródeł pokrycia terenu zgodnych z BDOT") + 
+          ylab("Procent obszaru aglomeracji [%]") + style + theme(legend.position = "none")
+
+setwd("E:/Projekty/projekty_22_23/LULC_stat/wykresy_artykul")
+svg("udzial_procentowy_aglo.svg", width = 9, height = 6.5, family = "Calibri")     
+wykres
+invisible(dev.off())
+#ggplotly(wykres, tooltip = "text")%>%
+#  config(displayModeBar = FALSE)
 
 
 ### Poznań
@@ -358,16 +354,24 @@ result_poznan_df <- as.data.frame(result_poznan)
 
 value_counts_poznan <- table(result_poznan_df)
 value_counts_poznan <- as.data.frame(round(( value_counts_poznan / 2624464) * 100, 2))
-
 colors <- c("#d73027", "#f46d43", "#fdae61", "#ffffbf", "#d9ef8b", "#66bd63", "#1a9850")
-ggplot(data = value_counts_poznan, aes(x = result_poznan_df, y = Freq, fill = result_poznan_df)) +
+
+wykres <- ggplot(data = value_counts_poznan, aes(x = result_poznan_df, y = Freq, fill = result_poznan_df, text = paste('<span style = " font-weight:bold">Liczba zgodności:</span>',
+                                                                                                                       '<span>',result_poznan_df ,'</span>',
+                                                                                                                       '</br></br><span style = " font-weight:bold">Udział procentowy:</span>',
+                                                                                                                       '<span>',paste(Freq, "%") ,'</span>'))) +
   geom_bar(stat = "identity", color = "#222222") + 
   scale_fill_manual(values = colors) +
   xlab("Liczba źródeł pokrycia terenu zgodnych z BDOT") + 
-  ylab("Procentowy udział w obszarze miasta Poznań") + style + theme(legend.position = "none") +
+  ylab("Procent obszaru miasta Poznań [%]") + style + theme(legend.position = "none") +
   scale_y_continuous(limits = c(0, 50))
 
-
+setwd("E:/Projekty/projekty_22_23/LULC_stat/wykresy_artykul")
+svg("udzial_procentowy_poznan.svg", width = 9, height = 6.5, family = "Calibri")     
+wykres
+invisible(dev.off())
+#ggplotly(wykres, tooltip = "text")%>%
+#  config(displayModeBar = FALSE)
 
 
 
@@ -396,7 +400,7 @@ data <- data.frame()
 
 
 for (i in 1:7) {
-  data_frame <- as.data.frame(table(as.data.frame(lc_list[[i]])))##lc_cropped
+  data_frame <- as.data.frame(table(as.data.frame(lc_cropped[[i]])))##lc_list
   data_frame$LC <- lc_names[i]
   data_frame$proc <- round((data_frame$Freq / sum(data_frame$Freq)) * 100, 2)
   
@@ -427,32 +431,34 @@ data <- data %>%
 
 
 ## styl dla wykresu
-#styl <- function(){
+styl <- function(){
   style <<- theme(
     text = element_text(family = "Calibri"),
     panel.grid.major.x = element_blank(),
-    plot.background = element_rect(fill = "#4b6865", color = NA),
-    panel.background = element_rect(fill = "#4b6865"), 
-    axis.title = element_text(size = 22,
-                              color = "#ffffff"), 
+    plot.background = element_rect(fill = "#ffffff", color = NA),
+    panel.background = element_rect(fill = "#ffffff"), 
+    axis.title = element_text(size = 16,
+                              color = "#222222"), 
     axis.title.y = element_text(vjust= 2.2),
     plot.title = element_text(size = 16,
-                              color = "#ffffff",
+                              color = "#222222",
                               vjust = 2,
                               hjust = 0.5), 
+    legend.title = element_text(size = 16,  color = "#222222"),
     legend.margin = margin(t = -15, r = 7, l = 7, b  = 7),
-    legend.title = element_text(size = 16,  color = "#ffffff"),
-    legend.text = element_text(size = 14, color = "#ffffff"),
-    axis.text = element_text(size = 20, 
-                             color = "#ffffff"),
-    axis.text.x = element_text(angle = 45, vjust = 1.2, hjust=1),
+    legend.text = element_text(size = 14, color = "#222222"),
+    axis.text = element_text(size = 14, 
+                             color = "#222222"),
+    axis.text.x = element_text(angle = 45, vjust = 0.9, hjust=1),
     legend.spacing.y = unit(0.2, 'cm'),
     legend.key = element_blank(),
     legend.background = element_rect(fill = "transparent", color = "transparent"),
-    plot.margin = margin(10, 10, -40, 10))
+    plot.margin = margin(10, 10, 20, 10),
+    panel.grid = element_line(color = "#222222"))
 }
-#styl()
-styl_inter <- function(){
+styl()
+
+#styl_inter <- function(){
   style <<- theme(
     text = element_text(family = "Calibri"),
     panel.grid.major.x = element_blank(),
@@ -477,24 +483,27 @@ styl_inter <- function(){
     legend.background = element_rect(fill = "transparent", color = "transparent"),
     plot.margin = margin(10, 10, -40, 10))
 }
-styl_inter()
+#styl_inter()
 
-wykres <- ggplot(data, aes(x = LC, y = proc, fill = Var1, text = paste('<span style = " font-weight:bold"> Źródło:</span>',
-                                                                              '<span>',LC ,'</span>',
-                                                                              '</br></br>',
-                                                                       '<span style = " font-weight:bold">Klasa:</span>',
-                                                                             '<span>',Var1 ,'</span>','</br>',
-                                                                       '<span style = " font-weight:bold">Udział procentowy:</span>',
-                                                                              '<span>',paste(proc, "%") ,'</span>'))) +
+wykres <- ggplot(data, aes(x = LC, y = proc, fill = Var1)) + #text = paste('<span style = " font-weight:bold"> Źródło:</span>',
+                                                          #                    '<span>',LC ,'</span>',
+                                                          #                    '</br></br>',
+                                                          #             '<span style = " font-weight:bold">Klasa:</span>',
+                                                          #                   '<span>',Var1 ,'</span>','</br>',
+                                                          #             '<span style = " font-weight:bold">Udział procentowy:</span>',
+                                                          #                    '<span>',paste(proc, "%") ,'</span>'))) +
   geom_bar(stat = "identity", position = "stack") +
   labs(x = "", y = "Procentowy udział klas pokrycia terenu", fill = "") +
   scale_fill_manual(values = c("Obszary podmokłe" = "#122b0e", "Obszary wodne" = "#61b5ff", "Zabudowa" = "#b83938",
                                "Lasy" = "#2d5e47", "Obszary trawiaste i krzewiaste" = "#9dd3b6", "Pola uprawne" = "#f4f430")) +
   style + guides(fill = guide_legend(byrow = TRUE)) 
 
-
-ggplotly(wykres, tooltip = c("text")) %>%
-  config(displayModeBar = FALSE)
+setwd("E:/Projekty/projekty_22_23/LULC_stat/wykresy_artykul")
+svg("udzial_procentowy_poznan.svg", width = 9, height = 6.5, family = "Calibri")     
+wykres
+invisible(dev.off())
+#ggplotly(wykres, tooltip = c("text")) %>%
+#  config(displayModeBar = FALSE)
 
 
 
@@ -553,7 +562,7 @@ error_aglo$LC <- c("Obszary podmokłe", "Obszary wodne", "Zabudowa", "Lasy", "Ob
     plot.margin = margin(10, 10, -20, 10))
 }
 #styl()
-styl_inter <- function(){
+#styl_inter <- function(){
   style <<- theme(
     text = element_text(family = "Calibri"),
     panel.grid.major.x = element_blank(),
@@ -578,7 +587,7 @@ styl_inter <- function(){
     legend.background = element_rect(fill = "transparent", color = "transparent"),
     plot.margin = margin(10, 10, -40, 10))
 }
-styl_inter()
+#styl_inter()
 
 ggplot(error_aglo, aes(x = reorder(LC, - error), y = error, fill = LC)) + geom_bar(stat = "identity") + style + 
   scale_fill_manual(values = c("Obszary podmokłe" = "#122b0e", "Obszary wodne" = "#61b5ff", "Zabudowa" = "#b83938",
@@ -645,27 +654,34 @@ error_poznan_long <- error_poznan_long %>%
   ))
   
 plot <- function() {
-  wykres <<- ggplot(error_poznan_long, aes(fill=LC, y=error, x=LandCover, text = paste('<span style = " font-weight:bold"> Źródło:</span>',
-                                                                            '<span>',LC ,'</span>',
-                                                                            '</br></br>',
-                                                                            '<span style = " font-weight:bold">Klasa:</span>',
-                                                                            '<span>',LandCover ,'</span>','</br>',
-                                                                            '<span style = " font-weight:bold">Udział procentowy:</span>',
-                                                                            '<span>',paste(error, "%") ,'</span>'))) + 
+  wykres <<- ggplot(error_poznan_long, aes(fill=LC, y=error, x=LandCover)) +# text = paste('<span style = " font-weight:bold"> Źródło:</span>',
+                                                                         #   '<span>',LC ,'</span>',
+                                                                         #   '</br></br>',
+                                                                         #   '<span style = " font-weight:bold">Klasa:</span>',
+                                                                         #   '<span>',LandCover ,'</span>','</br>',
+                                                                         #   '<span style = " font-weight:bold">Udział procentowy:</span>',
+                                                                         #   '<span>',paste(error, "%") ,'</span>'))) + 
     geom_bar(position=position_dodge(width = 0.7), stat="identity", color = "#555555") + 
     scale_fill_manual(values = c("Obszary podmokłe" = "#122b0e", "Obszary wodne" = "#61b5ff", "Zabudowa" = "#b83938",
                                  "Lasy" = "#2d5e47", "Obszary trawiaste i krzewiaste" = "#9dd3b6", "Pola uprawne" = "#f4f430")) +
-    style + labs(x = "", y = "% powierzchni klas zaklasyfikowanych niepoprawnie", fill = "") + 
-    guides(fill = guide_legend(byrow = TRUE))
+    style + labs(x = "", y = "% powierzchni klas zaklasyfikowanych niepoprawnie", fill = "", caption = "*brak obszarów podmokłych\n na terenie Poznania") + 
+    guides(fill = guide_legend(byrow = TRUE)) + theme(plot.caption = element_text(hjust = 1, size = 14, color = "#222222"),
+                                                      plot.caption.position = "plot")
     
 }
 plot()
 
-ggplotly(wykres, tooltip = c("text")) %>%
-  config(displayModeBar = FALSE) %>% 
-  layout(annotations = list(x = 1.4, y = 0.05, text = "*brak obszarów podmokłych\n na terenie Poznania",
-                     xref='paper', yref='paper', showarrow = F,
-                     font = list(size = 8, color = "#ffffff")))
+setwd("E:/Projekty/projekty_22_23/LULC_stat/wykresy_artykul")
+svg("error_poznan.svg", width = 9, height = 6.5, family = "Calibri")     
+wykres
+invisible(dev.off())
+
+
+#ggplotly(wykres, tooltip = c("text")) %>%
+#  config(displayModeBar = FALSE) %>% 
+#  layout(annotations = list(x = 1.4, y = 0.05, text = "*brak obszarów podmokłych\n na terenie Poznania",
+#                     xref='paper', yref='paper', showarrow = F,
+#                     font = list(size = 8, color = "#ffffff")))
 
 
 
@@ -675,13 +691,13 @@ error_aglo_long <- error_aglo %>%
   pivot_longer(cols = -LC, names_to = "LandCover", values_to = "error")
 
 plot <- function() {
-  wykres <<-ggplot(error_aglo_long, aes(fill=LC, y=error, x=LandCover, text = paste('<span style = " font-weight:bold"> Źródło:</span>',
-                                                                                    '<span>',LC ,'</span>',
-                                                                                    '</br></br>',
-                                                                                    '<span style = " font-weight:bold">Klasa:</span>',
-                                                                                    '<span>',LandCover ,'</span>','</br>',
-                                                                                    '<span style = " font-weight:bold">Udział procentowy:</span>',
-                                                                                    '<span>',paste(error, "%") ,'</span>'))) + 
+  wykres <<-ggplot(error_aglo_long, aes(fill=LC, y=error, x=LandCover)) + #text = paste('<span style = " font-weight:bold"> Źródło:</span>',
+                                                                       #             '<span>',LC ,'</span>',
+                                                                       #             '</br></br>',
+                                                                       #             '<span style = " font-weight:bold">Klasa:</span>',
+                                                                       #             '<span>',LandCover ,'</span>','</br>',
+                                                                       #             '<span style = " font-weight:bold">Udział procentowy:</span>',
+                                                                       #             '<span>',paste(error, "%") ,'</span>'))) + 
     geom_bar(position=position_dodge(width = 0.7), stat="identity", color = "#555555") + 
     scale_fill_manual(values = c("Obszary podmokłe" = "#122b0e", "Obszary wodne" = "#61b5ff", "Zabudowa" = "#b83938",
                                  "Lasy" = "#2d5e47", "Obszary trawiaste i krzewiaste" = "#9dd3b6", "Pola uprawne" = "#f4f430")) +
@@ -690,8 +706,14 @@ plot <- function() {
 }
 plot()
 
-ggplotly(wykres, tooltip = c("text")) %>%
-  config(displayModeBar = FALSE)
+setwd("E:/Projekty/projekty_22_23/LULC_stat/wykresy_artykul")
+svg("error_aglo.svg", width = 9, height = 6.5, family = "Calibri")     
+wykres
+invisible(dev.off())
+
+
+#ggplotly(wykres, tooltip = c("text")) %>%
+#  config(displayModeBar = FALSE)
 
 
 
