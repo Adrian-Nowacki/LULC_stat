@@ -1,0 +1,707 @@
+<!DOCTYPE html> 
+<html lang="pl">
+<head>
+<title>Porównanie dokładności źródeł terenu</title>
+<link rel="icon" href="strona/grafiki/tlo/logo.png" type="image/icon type">
+<meta charset="utf-8">
+<meta name="description" content="Porównanie dokładności różnych źródeł pokrycia terenu na przykładzie miasta Poznań i powiatu poznańskiego">
+<meta name="keywords" content="NVDI, UAM, geoinformacja, sekcja geoinformacji, wskaźnik NVDI, Wolin, Międzyzdroje, Woliński Park Narodowy, WPN, WNGiG, Wydział Nauk Geograficznych i Geologicznych, pokrycie terenu, roślinność, temperatura, korelacja, temperatura gruntu", >
+<meta name="author" content="Sekcja geoinformacji">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="strona/css/style.css" type="text/css"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" type="text/css" href="strona/css/sortable.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    
+</head>
+<body>
+   <script type="text/javascript" src="strona/js/sortable.js"></script>
+   <div class="w3-top">
+       <div class="navbar">
+         <a href="#" class="menu_kafelek w3-bar-item w3-button w3-padding-large w3-white">Artykuł</a>
+         <a href="strona/autorzy.html" class="menu_kafelek w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Autorzy</a>
+         <a href="https://sekcjageoinformacji.amu.edu.pl/" target="_blank" class="menu_kafelek w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Sekcja Geoinformacji</a>
+         <a id = "menu_kafelkow"class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-white" href="javascript:void(0);" onclick="menu_show()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+      </div>
+
+   <div id="navDemo" class="topnav w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+       <a href="strona/autorzy.html" class="w3-bar-item w3-button w3-padding-large">Autorzy</a>
+       <a href="https://sekcjageoinformacji.amu.edu.pl/" target="_blank" class="w3-bar-item w3-button w3-padding-large">Sekcja Geoinformacji</a>
+     </div>
+   </div>
+
+     <div id="title"> 
+      <p>Porównanie dokładności różnych źródeł pokrycia terenu na przykładzie miasta Poznań i powiatu poznańskiego</p> 
+     
+   </div>
+
+    <div class = "w3-row-padding w3-padding-32 w3-container w3-content" style = "max-width:1100px">
+       <h1>Wprowadzenie</h1></br>
+       <p class = "paragraf">
+        Poniższa publikacja jest wynikiem projektu badawczego przeprowadzonego przez Sekcję Geoinformacji Studenckiego Koła Naukowego
+         na Uniwersytecie im. Adama Mickiewicza w Poznaniu. Głównym celem projektu było porównanie dokładności różnych źródeł danych
+          obejmujących globalne oraz krajowe pokrycie i użytkowanie terenu na przykładzie miasta Poznań i powiatu poznańskiego.
+    </p>
+    <p class = "paragraf">
+
+          Powiat poznański oraz miasto Poznań są położone w zachodniej części województwa wielkopolskiego. Obszar ten charakteryzuje bardzo duża
+          powierzchnia terenu - Poznań, miasto na prawach powiatu, znajduje się w pierwszej dziesiątce największych miast w Polsce (262 km&#178).
+          Powiat Poznański, który dzieli się na 17 gmin otaczających Poznań, również jest jednym z największych powiatów w kraju (1900 km&#178).
+          Aglomeracja ta, ze względu na bliskość dużego miasta i terenów wiejskich, wyróżnia się znacznym zróżnicowaniem pokrycia i użytkowania
+          terenu, a także złożonością przestrzenną poszczególnych klas, która może wpływać na różnice w dokładności klasyfikacji terenu przez
+          różne zbiory danych. 
+ </p>
+ </div>
+ <div class = "w3-row-padding w3-padding-32 w3-container w3-content" style = "max-width:1100px">
+    <h1>Metodologia i dane</h1>
+    <p class = "paragraf">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel maximus mauris, id hendrerit massa. 
+      Vivamus commodo leo quis diam venenatis, nec cursus dui consequat. Nullam ante augue, condimentum quis feugiat quis, 
+      viverra vulputate metus. Ut a maximus odio. Sed quis lacinia metus. Sed mollis, nisl sit amet ultrices maximus, lectus 
+      felis porttitor ipsum, ut iaculis risus quam non quam. Nullam eu laoreet erat. Sed ut magna sed leo ullamcorper efficitur 
+      nec nec tortor. Vivamus diam est, euismod ut dolor eu, tristique pharetra ipsum.
+      Maecenas dapibus urna eu consequat eleifend. Nullam eu lacus tortor. Praesent feugiat dictum quam non fringilla. Nullam 
+      quis mollis enim, nec pharetra elit. Aenean eleifend nisl at nunc posuere scelerisque. Curabitur posuere neque dui, quis 
+      posuere lorem eleifend sit amet. Praesent sit amet porttitor tortor, sed laoreet odio. Aliquam erat volutpat. Nullam 
+      sapien orci, vehicula sit amet hendrerit eu, congue sed nibh. In hac habitasse platea dictumst. Donec ac ullamcorper sem.
+    </p>
+    <p class = "paragraf">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel maximus mauris, id hendrerit massa. 
+      Vivamus commodo leo quis diam venenatis, nec cursus dui consequat. Nullam ante augue, condimentum quis feugiat quis, 
+      viverra vulputate metus. Ut a maximus odio. Sed quis lacinia metus. Sed mollis, nisl sit amet ultrices maximus, lectus 
+      felis porttitor ipsum, ut iaculis risus quam non quam. Nullam eu laoreet erat. Sed ut magna sed leo ullamcorper efficitur 
+      nec nec tortor. Vivamus diam est, euismod ut dolor eu, tristique pharetra ipsum.
+      Maecenas dapibus urna eu consequat eleifend. Nullam eu lacus tortor.
+    </p>
+    <p class = "paragraf">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel maximus mauris, id hendrerit massa. Vivamus commodo leo quis diam venenatis, nec cursus dui consequat. Nullam ante augue, condimentum quis feugiat quis, viverra vulputate metus. Ut a maximus odio. Sed quis lacinia metus. Sed mollis, nisl sit amet ultrices maximus, lectus felis porttitor ipsum, ut iaculis risus quam non quam. Nullam eu laoreet erat. Sed ut magna sed leo ullamcorper efficitur nec nec tortor. Vivamus diam est, euismod ut dolor eu, tristique pharetra ipsum.
+
+      Maecenas dapibus urna eu consequat eleifend. Nullam eu lacus tortor. Praesent feugiat dictum quam non fringilla. Nullam quis mollis enim, nec pharetra elit. Aenean eleifend nisl at nunc posuere scelerisque. Curabitur posuere neque dui, quis posuere lorem eleifend sit amet. Praesent sit amet porttitor tortor, sed laoreet odio. Aliquam erat volutpat. Nullam sapien orci, vehicula sit amet hendrerit eu, congue sed nibh. In hac habitasse platea dictumst. Donec ac ullamcorper sem.
+      </p>
+
+    <div>
+        <p style="text-align: center; width:100%;"><img id = "clc" src = "strona/grafiki/klasyfikacja.png"></p>
+        <p style = "text-align:center; font-weight:150">Ryc. 1 Reklasyfikacja źródeł pokrycia terenu</p>
+    </div>
+
+  </div>
+
+ <div class = "w3-row-padding w3-padding-32 w3-container w3-content" style = "max-width:1100px">
+ <h1>Analiza</h1>
+     <h2>Charakterystyka źródeł pokrycia terenu po reklasyfikacji </h2>
+     <p class = "paragraf">Rozkład przestrzenny klas pokrycia terenu po wykonaniu reklasyfikacji uwidocznił najbardziej
+       charakterystyczne cechy poszczególnych zbiorów, które informują wizualnie przede wszystkim o różnicach w pierwotnej
+        rozdzielczości czy stopniu generalizacji, a także dominujących klasach i skłonności do przeszacowywania lub
+         niedoszacowania poszczególnych klas pokrycia terenu. Wizualna analiza poniższych map (ryc. 1-7) pozwala na ocenę,
+          w jaki sposób poszczególne źródła danych klasyfikują różne elementy krajobrazu. 
+    </p>
+
+    <p class = "paragraf">Największe różnice względem BDOT są dostrzegalne przede wszystkim w zbiorze CLC, który
+       charakteryzuje się rozkładem przestrzennym uzyskanym z rozdzielczości dużo mniejszej od pozostałych - 100m. 
+       Wśród pozostałych zbiorów, najbardziej zauważalnymi są Sentinel-2 oraz Urban Atlas, które przeszacowują występowanie 
+       kolejno obszarów podmokłych oraz obszarów trawiastych i krzewiastych.
+   </p>
+
+      <div class = "maps" style = "float:none!important;margin-left:auto!important;margin-right:auto!important">
+            <img class = "wydruk" style = "float:right" src = "strona/grafiki/mapy/bdot.png">
+            <p class = "maps_text">Ryc. 1 BDOT</p>
+      </div>
+
+      <span style = "clear:both;display:block"></span> 
+
+      <div class = "maps">
+            <img class = "wydruk" style = "float:right" src = "strona/grafiki/mapy/clc.png">
+            <p class = "maps_text">Ryc. 2 CLC</p>
+      </div>
+      <div class = "maps">
+        <img class = "wydruk" style = "float:right" src = "strona/grafiki/mapy/esa.png">
+        <p class = "maps_text">Ryc. 3 ESA</p>
+      </div>
+
+      <span style = "clear:both;display:block"></span> 
+
+      <div class = "maps">
+            <img class = "wydruk" style = "float:right" src = "strona/grafiki/mapy/esri.png">
+            <p class = "maps_text">Ryc. 4 Esri</p>
+      </div>
+      <div class = "maps">
+        <img class = "wydruk" style = "float:right" src = "strona/grafiki/mapy/urban.png">
+        <p class = "maps_text">Ryc. 5 Urban Atlas</p>
+      </div>
+
+      <span style = "clear:both;display:block"></span> 
+
+      <div class = "maps">
+            <img class = "wydruk" style = "float:left" src = "strona/grafiki/mapy/sentinel.png">
+            <p class = "maps_text">Ryc. 6 Sentinel</p>
+      </div>
+      <div class = "maps">
+        <img class = "wydruk" style = "float:right" src = "strona/grafiki/mapy/lucas.png">
+        <p class = "maps_text">Ryc. 7 LUCAS</p>
+  </div>
+      
+     <span style = "clear:both;display:block"></span> 
+     <p class = "paragraf" style = "margin-top:80px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel maximus mauris, id hendrerit massa. 
+      Vivamus commodo leo quis diam venenatis, nec cursus dui consequat. Nullam ante augue, condimentum quis feugiat quis, 
+      viverra vulputate metus. Ut a maximus odio. Sed quis lacinia metus. Sed mollis, nisl sit amet ultrices maximus, lectus 
+      felis porttitor ipsum, ut iaculis risus quam non quam. Nullam eu laoreet erat. Sed ut magna sed leo ullamcorper efficitur 
+      nec nec tortor. Vivamus diam est, euismod ut dolor eu, tristique pharetra ipsum.
+      Maecenas dapibus urna eu consequat eleifend. Nullam eu lacus tortor. Praesent feugiat dictum quam non fringilla. Nullam 
+      quis mollis enim, nec pharetra elit. Aenean eleifend nisl at nunc posuere scelerisque. Curabitur posuere neque dui, quis 
+      posuere lorem eleifend sit amet. Praesent sit amet porttitor tortor, sed laoreet odio. Aliquam erat volutpat. Nullam 
+      sapien orci, vehicula sit amet hendrerit eu, congue sed nibh. In hac habitasse platea dictumst. Donec ac ullamcorper sem.
+    </p>
+
+    <iframe class = "wykres" style = "float:left" frameborder="0" scrolling="no" modebar = "false" src="strona/grafiki/wykresy_interaktywne/udzial_pokrycia_aglo.html"></iframe>
+    <iframe class = "wykres"  style = "float:right" frameborder="0" scrolling="no" src="strona/grafiki/wykresy_interaktywne/udzial_pokrycia_poznan.html"></iframe>
+    <!--<div class = "maps">
+      <img class = "podwojne_wykresy" style = "float:right" src = "grafiki/wykresy/udzial_pokrycia/procent_aglo.png">
+      <p class = "maps_text">Ryc. 3 Mapa rozkładu temperatury w Międzyzdrojach</p>
+    </div>
+    <div class = "maps">
+      <img class = "podwojne_wykresy" style = "float:right" src = "grafiki/wykresy/udzial_pokrycia/procent_poznan.png">
+      <p class = "maps_text">Ryc. 3 Mapa rozkładu temperatury w Międzyzdrojach</p>
+    </div>-->
+
+
+
+     <!--<iframe class = "wykres"  style = "float:left" frameborder="0" scrolling="no" modebar = "false" src="wykresy/temp_wpn.html"></iframe>
+     <iframe class = "wykres"  style = "float:right" frameborder="0" scrolling="no" src="wykresy/temp_miedzyzdroje.html"></iframe>-->
+     <span style = "clear:both;display:block"></span> 
+  </br></br>
+     <h2>Zgodność z BDOT </h2>
+
+      <p class = "paragraf">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel maximus mauris, id hendrerit massa. 
+        Vivamus commodo leo quis diam venenatis, nec cursus dui consequat. Nullam ante augue, condimentum quis feugiat quis, 
+        viverra vulputate metus. Ut a maximus odio. Sed quis lacinia metus. Sed mollis, nisl sit amet ultrices maximus, lectus 
+        felis porttitor ipsum, ut iaculis risus quam non quam. Nullam eu laoreet erat. Sed ut magna sed leo ullamcorper efficitur 
+        nec nec tortor. Vivamus diam est, euismod ut dolor eu, tristique pharetra ipsum.
+        Maecenas dapibus urna eu consequat eleifend. Nullam eu lacus tortor. Praesent feugiat dictum quam non fringilla. Nullam 
+        quis mollis enim, nec pharetra elit. Aenean eleifend nisl at nunc posuere scelerisque. Curabitur posuere neque dui, quis 
+        posuere lorem eleifend sit amet. Praesent sit amet porttitor tortor, sed laoreet odio. Aliquam erat volutpat. Nullam 
+        sapien orci, vehicula sit amet hendrerit eu, congue sed nibh. In hac habitasse platea dictumst. Donec ac ullamcorper sem.
+      </p>
+    </p>
+  <div>
+    <p style="text-align: center; width:100%;"><img id = "mapa_zgodnosci" src = "strona/grafiki/mapy/mapa_zgodnosc.png"></p>
+    <p style = "text-align:center; font-weight:150">Ryc. 1 Mapa kategorii pokrycia terenu</p>
+   </div>
+
+
+   <iframe class = "wykres" style = "float:left" frameborder="0" scrolling="no" modebar = "false" src="strona/grafiki/wykresy_interaktywne/zgodnosc_aglo.html"></iframe>
+   <iframe class = "wykres"  style = "float:right" frameborder="0" scrolling="no" src="strona/grafiki/wykresy_interaktywne/zgodnosc_poznan.html"></iframe>
+   <!--<div class = "maps">
+    <img class = "podwojne_wykresy" style = "float:right" src = "grafiki/wykresy/zgodnosc/zgodnosc_aglomeracja.png">
+    <p class = "maps_text">Ryc. 3 Mapa rozkładu temperatury w Międzyzdrojach</p>
+  </div>
+  <div class = "maps">
+    <img class = "podwojne_wykresy" style = "float:right" src = "grafiki/wykresy/zgodnosc/zgodnosc_poznan.png">
+    <p class = "maps_text">Ryc. 3 Mapa rozkładu temperatury w Międzyzdrojach</p>
+  </div>-->
+
+
+         <span style = "clear:both;display:block"></span> 
+
+         <p class = "paragraf" style = "margin-top:80px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel maximus mauris, id hendrerit massa. 
+          Vivamus commodo leo quis diam venenatis, nec cursus dui consequat. Nullam ante augue, condimentum quis feugiat quis, 
+          viverra vulputate metus. Ut a maximus odio. Sed quis lacinia metus. 
+          </p>
+
+
+     <span style = "clear:both;display:block"></span> 
+
+  </br></br></br></br>
+     <h2>Porównanie dokładności klasyfikacji </h2>
+     <p class = "paragraf">W celu oceny jakości i dokładności każdego źródła pokrycia terenu, przeprowadzono analizę przy użyciu
+       macierzy przejść. Metoda ta pozwala na porównanie wyników klasyfikacji z danymi referencyjnymi - w tym przypadku z
+       Bazą Danych Obiektów Topograficznych (BDOT). Macierz błędów umożliwia określenie dokładności 
+       odwzorowania rzeczywistego stanu terenu oraz błędów i rozbieżności występujących w klasyfikacji.
+       W celu przedstawienia najbliższego pod względem dokładności klasyfikacji źródła pokrycia terenu, posłużono się proporcją
+       pikseli sklasyfikowanych poprawnie do liczby wszystkich występujących pikseli, a także wskaźnikiem Kappa - miarą
+       pozwalającą określić stopień zgodności pomiędzy reklasyfikacjami, uwzględniającą przypadkowe zgodności i błędy.
+      </p>
+
+      <p class = "paragraf">Najdokładniejszym zasobem w obu obszarach (całej aglomeracji oraz mieście Poznań) okazał się LUCAS, 
+        o dokładności 0,80 i Kappa wynoszącym 0,73. Najsłabszym natomiast - Urban Atlas, z dokładnością i kappa wynoszącym odpowiednio 0,74 i 0,64.
+      Obszar miasta Poznania najdokładniej względem BDOT został sklasyfikowany przez ten sam zasób - Urban Atlas (dokładność: 0,71, Kappa: 0,6),
+      czyli projekt obejmujący pokrycie terenu głównie miejskich obszarów. Najmniej dokładnym zasobem w powiecie Poznań okazał się Sentinel-2,
+       o dokładności wynoszącej jedynie 0,63 i wskaźniku Kappa równym 0,53.
+    </p>
+    
+  
+    <p class='img_text' style = "text-align:center;">
+        <b>Tabela 1. Statystyki obu zmiennych w podziale na kategorię zagospodarowania terenu</b>
+    </p>
+
+  <div id = "statystyki_tabela">
+
+    <table class = "sortable">
+      <thead>
+        <tr class = "bordered_2">
+          <th>ŹRÓDŁO POKRYCIA TERENU</th>
+          <th>AGLOMERACJA - DOKŁADNOŚĆ</th>
+          <th>AGLOMERACJA - KAPPA</th>
+          <th>POZNAŃ - DOKŁADNOŚĆ</th>
+          <th>POZNAŃ - KAPPA</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class = "bordered_2">
+          <td>LUCAS</td>
+          <td>0,802</td>
+          <td>0,713</td>
+          <td>0,693</td>
+          <td>0,590</td>
+        </tr>
+        <tr class = "bordered_2">
+          <td>ESA</td>
+          <td>0,786</td>
+          <td>0,695</td>
+          <td>0,644</td>
+          <td>0,535</td>
+        </tr>
+        <tr class = "bordered_2">
+          <td>Esri</td>
+          <td>0,787</td>
+          <td>0,691</td>
+          <td>0,660</td>
+          <td>0,545</td>
+        </tr>
+        <tr class = "bordered_2">
+          <td>Sentinel-2</td>
+          <td>0,754</td>
+          <td>0,658</td>
+          <td>0,628</td>
+          <td>0,530</td>
+        </tr>
+        <tr class = "bordered_2">
+          <td>CLC</td>
+          <td>0,771</td>
+          <td>0,668</td>
+          <td>0,636</td>
+          <td>0,508</td>
+        </tr>
+        <tr class = "bordered_2">
+          <td>Urban Atlas</td>
+          <td>0,742</td>
+          <td>0,644</td>
+          <td>0,706</td>
+          <td>0,601</td>
+        </tr>
+      </tbody>
+      </table>
+  </div>
+
+  <p class = "paragraf">Poza oceną dokładności wszystkich źródeł danych, przeanalizowano również poszczególne klasy 
+    pokrycia terenu każdego z nich. Poniżej przedstawiono procentowy udział niepoprawnie zaklasyfikowanych względem BDOT kategorii pokrycia terenu,
+    uzyskany na podstawie macierzy błędów (ryc. 6-7). W przypadku miasta Poznań, średnia błędu dla obszarów podmokłych nie obejmuje zasobu Urban Atlas, ze względu
+    na brak tej klasy występującej na obszarze powiatu Poznań.
+  </p>
+
+  <p class = "paragraf">Klasą obarczoną największym błędem klasyfikacji, zarówno na terenie aglomeracji jak i miasta Poznań, są obszary podmokłe,
+  ze średnim błędem równym kolejno 0,65 i 0,73. Obszary podmokłe we wszystkich zbiorach zajmują pierwsze bądź drugie miejsce z największym procentem
+  powierzchni niepoprawnie sklasyfikowanej - to potwierdza tezę, iż jest to najtrudniejsza klasa do klasyfikacji bazującej na zdjęciach satelitarnych.
+  Kolejnymi klasami z dość dużymi błędami klasyfikacji są obszary trawiaste i krzewiaste, których 44,6 % powierzchni na obszarze aglomeracji oraz 31,7 %
+  w mieście Poznań zostało zaklasyfikowane niepoprawnie, a także zabudowa - kolejno 38 % i 31,2 %. Klasą o największej dokładności klasyfikacji względem
+  BDOT okazały się obszary wodne, ze średnim błędem wynoszącym 0,05 w przypadku miasta Poznań i 0,08 w przypadku aglomeracji. Ze względu na dość znaczące
+  pokrycie powiatu poznańskiego zajmowane przez lasy (ponad 25 % powiatu) oraz pola uprawne (44 %), a także przede wszystkim ich złożoność przestrzenną,
+  klasy te w przypadku aglomeracji również wyróżniają się niskim błędem klasyfikacji - odpowiednio jedynie 0,16 i 0,12.
+  </p>
+
+
+  <iframe class = "wykres" style = "float:left" frameborder="0" scrolling="no" modebar = "false" src="strona/grafiki/wykresy_interaktywne/error_aglo.html"></iframe>
+  <iframe class = "wykres"  style = "float:right" frameborder="0" scrolling="no" src="strona/grafiki/wykresy_interaktywne/error_poznan.html"></iframe>
+      <!--<div class = "maps">   
+        <img class = "podwojne_wykresy" style = "float:right" src = "grafiki/wykresy/error_matrix/error_aglo.png">
+        <p class = "maps_text">Ryc. 6 Rozkład przestrzenny temperatury</p>
+     </div>
+     <div class = "maps">   
+      <img class = "podwojne_wykresy" style = "float:right"src = "grafiki/wykresy/error_matrix/error_poznan.png">
+      <p class = "maps_text">Ryc. 6 Rozkład przestrzenny temperatury</p>
+   </div>-->
+     <span style = "clear:both;display:block"></span> 
+  <p class = "paragraf">W celu przedstawienia szczegółowych statystyk zgodności poszczególnych klas pokrycia terenu dla każdego źródła, na
+     podstawie macierzy przejść obliczono precyzję (ang. <em>precision</em>), czułość (ang. <em>recall</em>), a także wskaźnik F1 (ang. <em>F1 - score</em>). Precyzja
+     odnosi się do procentu obszarów, w jakim dana klasa źródła danych zgadza się z tą samą klasą źródła referencyjnego (BDOT) - czułość
+     natomiast określa procent, w jakim dana klasa źródła referencyjnego (BDOT) zgadza się z tą samą klasą źródła danych. Wskaźnik F1 to
+     średnia harmoniczna pomiędzy precyzją i czułością - im jego wartość jest większa, tym lepsze odwzorowanie danej klasyfikacji względem źródła referencyjnego.
+    </p> 
+  </div>
+
+  
+ 
+  <p class='img_text' style = "text-align:center;"><b>Tabela 2. Statystyki dla aglomeracji</b></p> 
+ 
+  <div id = "statystyki_tabela">
+ 
+   <table class = "sortable">
+    <thead>
+      <tr class = "bordered">
+        <th>POKRYCIE TERENU</th>
+        <th>LUCAS - precyzja</th>
+        <th>LUCAS - czułość</th>
+        <th>LUCAS - F1</th>
+        <th>ESA - precyzja</th>
+        <th>ESA - czułość</th>
+        <th>ESA - F1</th>
+        <th>Esri - precyzja</th>
+        <th>Esri - czułość</th>
+        <th>Esri - F1</th>
+        <th>Sentinel-2 - precyzja</th>
+        <th>Sentinel-2 - czułość</th>
+        <th>Sentinel-2 - F1</th>
+        <th>CLC - precyzja</th>
+        <th>CLC - czułość</th>
+        <th>CLC - F1</th>
+        <th>Urban Atlas - precyzja</th>
+        <th>Urban Atlas - czułość</th>
+        <th>Urban Atlas - F1</th>
+      </tr>
+    </thead>
+     <tbody>
+       <tr class = "bordered">
+         <td>Obszary podmokłe</td>
+         <td>0,11</td>
+         <td>0,55</td>
+         <td>0,19</td>
+         <td>0,16</td>
+         <td>0,58</td>
+         <td>0,25</td>
+         <td>0,01</td>
+         <td>0,31</td>
+         <td>0,01</td>
+         <td>0,51</td>
+         <td>0,09</td>
+         <td>0,15</td>
+         <td>0,07</td>
+         <td>0,39</td>
+         <td>0,12</td>
+         <td>0,01</td>
+         <td>0,47</td>
+         <td>0,02</td>
+       </tr>
+       <tr class = "bordered">
+         <td>Obszary wodne</td>
+         <td>0,70</td>
+         <td>0,91</td>
+         <td>0,79</td>
+         <td>0,74</td>
+         <td>0,93</td>
+         <td>0,83</td>
+         <td>0,82</td>
+         <td>0,86</td>
+         <td>0,84</td>
+         <td>0,52</td>
+         <td>0,97</td>
+         <td>0,68</td>
+         <td>0,52</td>
+         <td>0,90</td>
+         <td>0,66</td>
+         <td>0,75</td>
+         <td>0,93</td>
+         <td>0,83</td>
+       </tr>
+       <tr class = "bordered">
+         <td>Zabudowa</td>
+         <td>0,75</td>
+         <td>0,64</td>
+         <td>0,69</td>
+         <td>0,54</td>
+         <td>0,74</td>
+         <td>0,62</td>
+         <td>0,88</td>
+         <td>0,52</td>
+         <td>0,65</td>
+         <td>0,73</td>
+         <td>0,62</td>
+         <td>0,67</td>
+         <td>0,73</td>
+         <td>0,55</td>
+         <td>0,63</td>
+         <td>0,87</td>
+         <td>0,65</td>
+         <td>0,74</td>
+       </tr>
+       <tr class = "bordered">
+         <td>Lasy</td>
+         <td>0,92</td>
+         <td>0,87</td>
+         <td>0,89</td>
+         <td>0,97</td>
+         <td>0,70</td>
+         <td>0,81</td>
+         <td>0,94</td>
+         <td>0,87</td>
+         <td>0,90</td>
+         <td>0,91</td>
+         <td>0,87</td>
+         <td>0,89</td>
+         <td>0,87</td>
+         <td>0,86</td>
+         <td>0,87</td>
+         <td>0,90</td>
+         <td>0,87</td>
+         <td>0,89</td>
+       </tr>
+       <tr class = "bordered">
+         <td>Obszary trawiaste i krzewiaste</td>
+         <td>0,37</td>
+         <td>0,57</td>
+         <td>0,45</td>
+         <td>0,48</td>
+         <td>0,55</td>
+         <td>0,51</td>
+         <td>0,11</td>
+         <td>0,74</td>
+         <td>0,19</td>
+         <td>0,33</td>
+         <td>0,56</td>
+         <td>0,41</td>
+         <td>0,31</td>
+         <td>0,52</td>
+         <td>0,39</td>
+         <td>0,49</td>
+         <td>0,37</td>
+         <td>0,42</td>
+       </tr>
+       <tr class = "bordered">
+         <td>Pola uprawne</td>
+         <td>0,93</td>
+         <td>0,86</td>
+         <td>0,89</td>
+         <td>0,87</td>
+         <td>0,95</td>
+         <td>0,91</td>
+         <td>0,94</td>
+         <td>0,85</td>
+         <td>0,89</td>
+         <td>0,85</td>
+         <td>0,89</td>
+         <td>0,87</td>
+         <td>0,93</td>
+         <td>0,84</td>
+         <td>0,88</td>
+         <td>0,73</td>
+         <td>0,89</td>
+         <td>0,80</td>
+       </tr>
+    </tbody>
+    </table>
+ 
+ 
+ </div>
+ 
+ <p class='img_text' style = "text-align:center;"><b>Tabela 3. Statystyki dla Poznania</b></p> 
+ 
+  <div id = "statystyki_tabela">
+ 
+   <table class = "sortable">
+    <thead>
+      <tr class = "bordered">
+        <th>POKRYCIE TERENU</th>
+        <th>LUCAS - precyzja</th>
+        <th>LUCAS - czułość</th>
+        <th>LUCAS - F1</th>
+        <th>ESA - precyzja</th>
+        <th>ESA - czułość</th>
+        <th>ESA - F1</th>
+        <th>Esri - precyzja</th>
+        <th>Esri - czułość</th>
+        <th>Esri - F1</th>
+        <th>Sentinel-2 - precyzja</th>
+        <th>Sentinel-2 - czułość</th>
+        <th>Sentinel-2 - F1</th>
+        <th>CLC - precyzja</th>
+        <th>CLC - czułość</th>
+        <th>CLC - F1</th>
+        <th>Urban Atlas - precyzja</th>
+        <th>Urban Atlas - czułość</th>
+        <th>Urban Atlas - F1</th>
+      </tr>
+    </thead>
+     <tbody>
+       <tr class = "bordered">
+         <td>Obszary podmokłe</td>
+         <td>0,16</td>
+         <td>0,47</td>
+         <td>0,24</td>
+         <td>0,19</td>
+         <td>0,50</td>
+         <td>0,27</td>
+         <td>0,02</td>
+         <td>0,16</td>
+         <td>0,04</td>
+         <td>0,65</td>
+         <td>0,03</td>
+         <td>0,05</td>
+         <td>0,11</td>
+         <td>0,19</td>
+         <td>0,14</td>
+         <td>0,00</td>
+         <td>-</td>
+         <td>-</td>
+       </tr>
+       <tr class = "bordered">
+         <td>Obszary wodne</td>
+         <td>0,70</td>
+         <td>0,94</td>
+         <td>0,80</td>
+         <td>0,75</td>
+         <td>0,97</td>
+         <td>0,84</td>
+         <td>0,84</td>
+         <td>0,90</td>
+         <td>0,87</td>
+         <td>0,54</td>
+         <td>1,00</td>
+         <td>0,70</td>
+         <td>0,54</td>
+         <td>0,92</td>
+         <td>0,68</td>
+         <td>0,81</td>
+         <td>0,97</td>
+         <td>0,88</td>
+       </tr>
+       <tr class = "bordered">
+         <td>Zabudowa</td>
+         <td>0,86</td>
+         <td>0,69</td>
+         <td>0,77</td>
+         <td>0,61</td>
+         <td>0,81</td>
+         <td>0,70</td>
+         <td>0,96</td>
+         <td>0,57</td>
+         <td>0,72</td>
+         <td>0,82</td>
+         <td>0,74</td>
+         <td>0,78</td>
+         <td>0,87</td>
+         <td>0,61</td>
+         <td>0,72</td>
+         <td>0,92</td>
+         <td>0,69</td>
+         <td>0,79</td>
+       </tr>
+       <tr class = "bordered">
+         <td>Lasy</td>
+         <td>0,81</td>
+         <td>0,81</td>
+         <td>0,81</td>
+         <td>0,97</td>
+         <td>0,44</td>
+         <td>0,60</td>
+         <td>0,87</td>
+         <td>0,81</td>
+         <td>0,84</td>
+         <td>0,88</td>
+         <td>0,74</td>
+         <td>0,81</td>
+         <td>0,61</td>
+         <td>0,80</td>
+         <td>0,69</td>
+         <td>0,77</td>
+         <td>0,78</td>
+         <td>0,77</td>
+       </tr>
+       <tr class = "bordered">
+         <td>Obszary trawiaste i krzewiaste</td>
+         <td>0,38</td>
+         <td>0,62</td>
+         <td>0,47</td>
+         <td>0,40</td>
+         <td>0,73</td>
+         <td>0,52</td>
+         <td>0,12</td>
+         <td>0,84</td>
+         <td>0,21</td>
+         <td>0,23</td>
+         <td>0,76</td>
+         <td>0,35</td>
+         <td>0,34</td>
+         <td>0,52</td>
+         <td>0,41</td>
+         <td>0,46</td>
+         <td>0,62</td>
+         <td>0,53</td>
+       </tr>
+       <tr class = "bordered">
+         <td>Pola uprawne</td>
+         <td>0,86</td>
+         <td>0,61</td>
+         <td>0,71</td>
+         <td>0,77</td>
+         <td>0,90</td>
+         <td>0,83</td>
+         <td>0,85</td>
+         <td>0,66</td>
+         <td>0,74</td>
+         <td>0,74</td>
+         <td>0,64</td>
+         <td>0,69</td>
+         <td>0,85</td>
+         <td>0,66</td>
+         <td>0,74</td>
+         <td>0,66</td>
+         <td>0,73</td>
+         <td>0,70</td>
+       </tr>
+    </tbody>
+    </table>
+ 
+ 
+ 
+ </div>
+
+<div class = "w3-row-padding w3-padding-32 w3-container w3-content" style = "max-width:1100px">
+  <h1>Wnioski i podsumowanie</h1>
+
+<p class = "paragraf">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel maximus mauris, id hendrerit massa. 
+  Vivamus commodo leo quis diam venenatis, nec cursus dui consequat. Nullam ante augue, condimentum quis feugiat quis, 
+  viverra vulputate metus. Ut a maximus odio. Sed quis lacinia metus. Sed mollis, nisl sit amet ultrices maximus, lectus 
+  felis porttitor ipsum, ut iaculis risus quam non quam. Nullam eu laoreet erat. Sed ut magna sed leo ullamcorper efficitur 
+  nec nec tortor. Vivamus diam est, euismod ut dolor eu, tristique pharetra ipsum.
+  <br><br></p> 
+
+  <p class = "paragraf"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel maximus mauris, id hendrerit massa. 
+    Vivamus commodo leo quis diam venenatis, nec cursus dui consequat. Nullam ante augue, condimentum quis feugiat quis, 
+    viverra vulputate metus. Ut a maximus odio. Sed quis lacinia metus. Sed mollis, nisl sit amet ultrices maximus, lectus 
+    felis porttitor ipsum, ut iaculis risus quam non quam. Nullam eu laoreet erat. Sed ut magna sed leo ullamcorper efficitur 
+    nec nec tortor. Vivamus diam est, euismod ut dolor eu, tristique pharetra ipsum.
+    Maecenas dapibus urna eu consequat eleifend. Nullam eu lacus tortor. 
+     <br><br> </p>
+
+
+
+
+
+
+ </div>
+<div id="procent">
+   <span id="procent-value"></span>
+</div>
+
+<footer id = "footer" class = "w3-xlarge  w3-container w3-center w3-padding-32 w3-opacity-min">
+  © Sekcja Geoinformacji 2022
+<div class = "w3-padding-32">
+  <a href = "https://www.facebook.com/SekcjaGeoinformacjiUam/" target="_blank">
+    <i class = "fa fa-facebook-official w3-opacity-off w3-xxlarge w3-margin-right w3-hover-opacity"></i>
+  </a>
+  <a href = "https://www.instagram.com/sekcja_geoinformacji_uam/" target="_blank">
+    <i class = "fa fa-instagram w3-opacity-off w3-xxlarge w3-margin-right w3-margin-left w3-hover-opacity"></i>
+  </a>
+  <a href = "https://github.com/sekcja-geoinformacji-uam" target="_blank">
+    <i class = "fa fa-github w3-opacity-off w3-xxlarge w3-margin-left w3-hover-opacity"></i>
+  </a>
+</div>
+
+</footer>
+   
+    <script type="text/javascript" src="strona/js/script.js"></script>
+</body>
