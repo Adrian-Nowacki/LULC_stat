@@ -143,8 +143,11 @@ p {
 	}
 	.wydruk {
 		width:370px!important;
+		height:275px!important;	
+	}
+	#mapa_zgodnosci{
+		width:370px!important;
 		height:275px!important;
-		
 	}
 	.maps{
 		width:370px!important;
