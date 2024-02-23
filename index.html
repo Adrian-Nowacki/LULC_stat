@@ -4,7 +4,7 @@
 <title>Porównanie dokładności źródeł terenu</title>
 <link rel="icon" href="strona/grafiki/tlo/logo.png" type="image/icon type">
 <meta charset="utf-8">
-<meta name="description" content="Porównanie dokładności różnych źródeł pokrycia terenu na przykładzie miasta Poznań i powiatu poznańskiego">
+<meta name="description" content="Porównanie dokładności różnych źródeł pokrycia terenu i użytkowania ziemi na przykładzie miasta Poznań i powiatu poznańskiego">
 <meta name="keywords" content="NVDI, UAM, geoinformacja, sekcja geoinformacji, wskaźnik NVDI, Wolin, Międzyzdroje, Woliński Park Narodowy, WPN, WNGiG, Wydział Nauk Geograficznych i Geologicznych, pokrycie terenu, roślinność, temperatura, korelacja, temperatura gruntu", >
 <meta name="author" content="Sekcja geoinformacji">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -37,120 +37,128 @@
    </div>
 
      <div id="title"> 
-      <p>Porównanie dokładności różnych źródeł pokrycia terenu na przykładzie miasta Poznań i powiatu poznańskiego</p> 
+      <p>Porównanie dokładności różnych źródeł pokrycia terenu i użytkowania ziemi na przykładzie miasta Poznań i powiatu poznańskiego</p> 
      
    </div>
 
     <div class = "w3-row-padding w3-padding-32 w3-container w3-content" style = "max-width:1100px">
        <h1>Wprowadzenie</h1></br>
        <p class = "paragraf">
-        Poniższa publikacja jest wynikiem projektu badawczego przeprowadzonego przez Sekcję Geoinformacji Studenckiego Koła Naukowego
-         na Uniwersytecie im. Adama Mickiewicza w Poznaniu. Głównym celem projektu było porównanie dokładności różnych źródeł danych
-          obejmujących globalne oraz krajowe pokrycie i użytkowanie terenu na przykładzie miasta Poznań i powiatu poznańskiego.
+    Poniższa publikacja jest wynikiem projektu badawczego przeprowadzonego przez Sekcję Geoinformacji Studenckiego Koła Naukowego na Uniwersytecie im. Adama Mickiewicza w Poznaniu. 
+    Głównym celem projektu było porównanie dokładności różnych źródeł danych obejmujących globalne oraz krajowe pokrycie i użytkowanie terenu na przykładzie miasta Poznań i powiatu poznańskiego.
     </p>
     <p class = "paragraf">
-
-          Powiat poznański oraz miasto Poznań są położone w zachodniej części województwa wielkopolskiego. Obszar ten charakteryzuje bardzo duża
-          powierzchnia terenu - Poznań, miasto na prawach powiatu, znajduje się w pierwszej dziesiątce największych miast w Polsce (262 km&#178).
-          Powiat Poznański, który dzieli się na 17 gmin otaczających Poznań, również jest jednym z największych powiatów w kraju (1900 km&#178).
-          Aglomeracja ta, ze względu na bliskość dużego miasta i terenów wiejskich, wyróżnia się znacznym zróżnicowaniem pokrycia i użytkowania
-          terenu, a także złożonością przestrzenną poszczególnych klas, która może wpływać na różnice w dokładności klasyfikacji terenu przez
-          różne zbiory danych. 
+    Powiat poznański oraz miasto Poznań są położone w zachodniej części Polski, w centrum województwa wielkopolskiego. 
+    Obszar ten charakteryzuje bardzo duża powierzchnia terenu - Poznań, miasto na prawach powiatu, znajduje się w pierwszej dziesiątce największych miast w Polsce (262 km&#178).
+    Powiat Poznański, który dzieli się na 17 gmin otaczających Poznań, również jest jednym z największych powiatów w kraju (1900 km&#178).
+    Aglomeracja ta, ze względu na bliskość dużego miasta i terenów wiejskich, wyróżnia się znacznym zróżnicowaniem pokrycia terenu i użytkowania ziemi, a także złożonością przestrzenną poszczególnych klas, która może wpływać na różnice w dokładności klasyfikacji terenu przez różne zbiory danych. 
  </p>
  </div>
  <div class = "w3-row-padding w3-padding-32 w3-container w3-content" style = "max-width:1100px">
     <h1>Dane i metodologia</h1>
     <p class = "paragraf">
-        Porównanie dokładności różnych źródeł pokrycia terenu na przykładzie miasta Poznań i powiatu poznańskiego zostało przeprowadzone na podstawie siedmiu zbiorów danych dotyczących użytkowania ziemi oraz pokrycia terenu. Użyte zbiory danych to dane ogólnodostępne i darmowe, pochodzące z 2018 roku (wyjątek stanową Sentinel-2 Global Land Cover z 2017 roku oraz ESA WorldCover z roku 2020).
+    Porównanie dokładności różnych źródeł pokrycia terenu na przykładzie miasta Poznań i powiatu poznańskiego zostało przeprowadzone na podstawie siedmiu zbiorów danych dotyczących użytkowania ziemi oraz pokrycia terenu. 
+    Użyte zbiory danych to dane ogólnodostępne i darmowe, pochodzące z 2018 roku (wyjątek stanową Sentinel-2 Global Land Cover z 2017 roku oraz ESA WorldCover z roku 2020).
 
-        Referencyjnym zbiorem danych, do którego porównywane były pozostałe produkty, była Baza Danych Obiektów Topograficznych (BDOT10k), zawierająca informacje o pokryciu i użytkowaniu terenu. 
-        Urban Atlas (UA) to baza danych skoncentrowana na funkcjonalnych obszarach miejskich, opracowywana dla najbardziej zaludnionych miast europejskich, głównie tych o liczbie mieszkańców przekraczającej 50 000. Podobnie jak BDOT10k, jedna z warstw bazy Urban Atlas zawiera szczegółowe dane o użytkowaniu ziemi oraz pokryciu terenu.
+    Referencyjnym zbiorem danych, do którego porównywane były pozostałe produkty, była Baza Danych Obiektów Topograficznych (BDOT10k), zawierająca informacje o pokryciu i użytkowaniu terenu. 
+    Urban Atlas (UA) to baza danych skoncentrowana na funkcjonalnych obszarach miejskich, opracowywana dla najbardziej zaludnionych miast europejskich, głównie tych o liczbie mieszkańców przekraczającej 50 000.
+    Podobnie jak BDOT10k, jedna z warstw bazy Urban Atlas zawiera szczegółowe dane o użytkowaniu ziemi oraz pokryciu terenu.
 
-        Pozostałe produkty, takie jak Sentinel-2 Global Land Cover (S2GLC), Esri Land Cover, ESA WorldCover oraz CORINE Land Cover (CLC), zostały utworzone na podstawie danych satelitarnych. Proces tworzenia Sentinel-2 Global Land Cover oraz Esri Land Cover został oparty o zobrazowania satelitarne z misji Sentinel-2. Do stworzenia ESA WorldCover oprócz danych Sentinel-2 wykorzystano również dane radarowe z misji Sentinel-1, a produkt CORINE Land Cover 2018 powstał na podstawie danych Sentinel-2 i Landsat 8.
+    Pozostałe produkty, takie jak Sentinel-2 Global Land Cover (S2GLC), Esri Land Cover, ESA WorldCover oraz CORINE Land Cover (CLC), zostały utworzone na podstawie danych satelitarnych. Proces tworzenia Sentinel-2 Global Land Cover oraz Esri Land Cover został oparty o zobrazowania satelitarne z misji Sentinel-2. 
+    Do stworzenia ESA WorldCover oprócz danych Sentinel-2 wykorzystano również dane radarowe z misji Sentinel-1, a produkt CORINE Land Cover 2018 powstał na podstawie danych Sentinel-2 i Landsat 8.
 
-        Oryginalne dane z projektu LUCAS to dane punktowe, w których rachmistrzowie gromadzili informacje o typie pokrycia terenu i użytkowaniu ziemi na określonych miejscach. Otrzymane dane zostały wykorzystane do stworzenia ostatniego produktu użytego w opracowaniu - zbioru danych opracowanego przy użyciu metod uczenia maszynowego, wykorzystującego próbki zebrane z projektu LUCAS, dane CORINE Land Cover oraz zharmonizowane zdjęcia satelitarne GLAD Landsat ARD. Powstały produkt posiada system klasyfikacji CORINE Land Cover, jednak cechuje się wyższą rozdzielczością przestrzenną niż CLC.
+    Oryginalne dane z projektu LUCAS to dane punktowe, w których rachmistrzowie gromadzili informacje o typie pokrycia terenu i użytkowaniu ziemi na określonych miejscach. 
+    Otrzymane dane zostały wykorzystane do stworzenia ostatniego produktu użytego w opracowaniu - zbioru danych opracowanego przy użyciu metod uczenia maszynowego, wykorzystującego próbki zebrane z projektu LUCAS, dane CORINE Land Cover oraz zharmonizowane zdjęcia satelitarne GLAD Landsat ARD. 
+    Powstały produkt posiada system klasyfikacji CORINE Land Cover, jednak cechuje się wyższą rozdzielczością przestrzenną niż CLC.
     </p>
     
 
     <p class = "paragraf">
-Jako referencyjny zbiór danych wybrano Bazę Danych Obiektów Topograficznych, która pochodzi z Państwowego Zasobu Geodezyjnego i Kartograficznego, co czyni ją wiarygodnym źródłem informacji dotyczących pokrycia terenu i użytkowania ziemi na obszarze Polski. Ze względu na jego największą dostępność wśród zasobów danych, analizę przeprowadzono na danych z 2018 roku, a w przypadku braku danych dla roku 2018 wybrano najbliższy dostępny rocznik (2017 dla Sentinel-2 GLC, 2020 dla ESA WorldCover).
+    Jako referencyjny zbiór danych wybrano Bazę Danych Obiektów Topograficznych, która pochodzi z Państwowego Zasobu Geodezyjnego i Kartograficznego, co czyni ją wiarygodnym źródłem informacji dotyczących pokrycia terenu i użytkowania ziemi na obszarze Polski. 
+    Ze względu na jego największą dostępność wśród zasobów danych, analizę przeprowadzono na danych z 2018 roku, a w przypadku braku danych dla roku 2018 wybrano najbliższy dostępny rocznik (2017 dla Sentinel-2 GLC, 2020 dla ESA WorldCover).
 
-Wszystkie źródła pokrycia terenu i użytkowania ziemi zreklasyfikowano do 6 klas głównych: obszary podmokłe, obszary wodne, zabudowa, lasy obszary trawiaste i krzewiaste i pola uprawne. Klasy główne wydzielono na podstawie możliwości reklasyfikacji według dokumentacji producenta, a także uwzględniono jedynie klasy występujące na obszarze badań.
+    Wszystkie źródła pokrycia terenu i użytkowania ziemi zreklasyfikowano do 6 klas głównych: obszary podmokłe, obszary wodne, zabudowa, lasy obszary trawiaste i krzewiaste i pola uprawne. 
+    Klasy główne wydzielono na podstawie możliwości reklasyfikacji według dokumentacji producenta, a także uwzględniono jedynie klasy występujące na obszarze badań.
 
-Wszystkie zbiory danych zostały przekształcone do układu współrzędnych ETRS2000-PL/CS92, w którym dostępna jest Baza Danych Obiektów Topograficznych. Następnie dane zostały sprowadzone do wspólnej rozdzielczości (10 m) i ograniczone do określonego obszaru badań.
+    Wszystkie zbiory danych zostały przekształcone do układu współrzędnych ETRS2000-PL/CS92, w którym dostępna jest Baza Danych Obiektów Topograficznych. 
+    Następnie dane zostały sprowadzone do wspólnej rozdzielczości (10 m) i ograniczone do określonego obszaru badań.
 
-Analizę porównawczą dokładności wszystkich źródeł danych oraz poszczególnych klas pokrycia terenu i użytkowania ziemi przeprowadzono na podstawie macierzy błędów. W celu oceny dokładności poszczególnych klas dla każdego źródła danych obliczono precyzję, czułość oraz wskaźnik F1 na podstawie proporcji sklasyfikowanych komórek rastra porównywanego i referencyjnego. Precyzja odnosi się do procentowego udziału obszarów, w których dana klasa źródła danych zgadza się z tą samą klasą źródła referencyjnego, podczas gdy czułość określa procentowy udział obszarów, w których dana klasa źródła referencyjnego zgadza się z tą samą klasą innego źródła danych. Wskaźnik F1 stanowi średnią harmoniczną między precyzją a czułością, gdzie jego większa wartość oznacza lepsze odwzorowanie klasyfikacji w stosunku do źródła referencyjnego. Macierz błędów pozwala na określenie dokładności odwzorowania rzeczywistego stanu terenu oraz błędów i rozbieżności występujących w klasyfikacji. W celu wyboru najbardziej dokładnego źródła pokrycia terenu i użytkowania ziemi uwzględniono proporcję poprawnie sklasyfikowanych komórek oraz wskaźnik Kappa, który pozwala na określenie stopnia zgodności pomiędzy reklasyfikacjami, uwzględniając przypadkowe błędy.
+    Analizę porównawczą dokładności wszystkich źródeł danych oraz poszczególnych klas pokrycia terenu i użytkowania ziemi przeprowadzono na podstawie macierzy błędów. 
+    W celu oceny dokładności poszczególnych klas dla każdego źródła danych obliczono precyzję, czułość oraz wskaźnik F1 na podstawie proporcji sklasyfikowanych komórek rastra porównywanego i referencyjnego. 
+    Precyzja odnosi się do procentowego udziału obszarów, w których dana klasa źródła danych zgadza się z tą samą klasą źródła referencyjnego, podczas gdy czułość określa procentowy udział obszarów, w których dana klasa źródła referencyjnego zgadza się z tą samą klasą innego źródła danych. 
+    Wskaźnik F1 stanowi średnią harmoniczną między precyzją a czułością, gdzie jego większa wartość oznacza lepsze odwzorowanie klasyfikacji w stosunku do źródła referencyjnego. 
+    Macierz błędów pozwala na określenie dokładności odwzorowania rzeczywistego stanu terenu oraz błędów i rozbieżności występujących w klasyfikacji. 
+    W celu wyboru najdokładniejszego źródła pokrycia terenu i użytkowania ziemi uwzględniono proporcję poprawnie sklasyfikowanych komórek oraz wskaźnik Kappa, który pozwala na określenie stopnia zgodności pomiędzy reklasyfikacjami, uwzględniając przypadkowe błędy.
     </p>
 
     <div>
         <p style="text-align: center; width:100%;"><img id = "clc" src = "strona/grafiki/klasyfikacja.png"></p>
-        <p style = "text-align:center; font-weight:150">Ryc. 1 Reklasyfikacja źródeł pokrycia terenu</p>
+        <p style = "text-align:center; font-weight:150">Ryc. 1 Reklasyfikacja źródeł pokrycia terenu i użytkowania ziemi</p>
     </div>
 
   </div>
 
  <div class = "w3-row-padding w3-padding-32 w3-container w3-content" style = "max-width:1100px">
  <h1>Analiza</h1>
-     <h2>Charakterystyka źródeł pokrycia terenu po reklasyfikacji </h2>
-     <p class = "paragraf">Rozkład przestrzenny klas pokrycia terenu po wykonaniu reklasyfikacji uwidocznił najbardziej
-       charakterystyczne cechy poszczególnych zbiorów, które informują wizualnie przede wszystkim o różnicach w pierwotnej
-        rozdzielczości czy stopniu generalizacji, a także dominujących klasach i skłonności do przeszacowywania lub
-         niedoszacowania poszczególnych klas pokrycia terenu. Wizualna analiza poniższych map (ryc. 1-7) pozwala na ocenę,
-          w jaki sposób poszczególne źródła danych klasyfikują różne elementy krajobrazu. 
+     <h2>Charakterystyka źródeł pokrycia terenu i użytkowania ziemi po reklasyfikacji </h2>
+     <p class = "paragraf">
+         Rozkład przestrzenny klas pokrycia terenu i użytkowania ziemi po wykonaniu reklasyfikacji uwidocznił najbardziej charakterystyczne cechy poszczególnych zbiorów, które informują wizualnie przede wszystkim o różnicach w pierwotnej rozdzielczości czy stopniu generalizacji, a także dominujących klasach i skłonności do przeszacowywania lub niedoszacowania poszczególnych klas pokrycia terenu i użytkowania ziemi. 
+         Wizualna analiza poniższych map (ryc. 2-8) pozwala na ocenę, w jaki sposób poszczególne źródła danych klasyfikują różne elementy krajobrazu.
     </p>
 
-    <p class = "paragraf">Największe różnice względem BDOT10k są dostrzegalne przede wszystkim w zbiorze CLC, który
-       charakteryzuje się rozkładem przestrzennym uzyskanym z rozdzielczości dużo mniejszej od pozostałych - 100m. 
-       Wśród pozostałych zbiorów, najbardziej zauważalnymi są Sentinel-2 Global Land Cover oraz Urban Atlas, które przeszacowują występowanie 
-       kolejno obszarów podmokłych oraz obszarów trawiastych i krzewiastych.
-   </p>
-
-    <p class = "paragraf">Procentowy udział klas dla każdego ze źródeł danych pozwala stwierdzić ich przeszacowanie bądź niedoszacowanie względem źródła danych BDOT10k (ryc. 4).
-       Poziom zurbanizowania terenu miasta Poznań jest zdecydowanie większy w porównaniu do całej aglomeracji, jednak zabudowa jest klasą w większości przeszacowaną zarówno dla aglomeracji, 
-       jak i miasta Poznań. W tym przypadku Esri Land Cover jest źródłem, które cechowało się największym przeszacowaniem udziału procentowego zabudowy, wynoszącym względem aglomeracji ok. 8%, natomiast dla miasta Poznań - ok. 22%. 
-       Klasą charakteryzującą się największym niedoszacowaniem są obszary trawiaste i krzewiaste, sklasyfikowane w ramach źródła Esri Land Coveri. Jedną z klas, która osiągnęła bardzo zbliżone wartości względem referencyjnego źródła, 
-       są lasy - te jednak w przypadku źródła ESA WorldCover zostały w dużym stopniu przeszacowane o niemal 10% dla aglomeracji oraz o 24,42% dla miasta Poznań. Największym przeszacowaniem na obszarze aglomeracji oraz miasta odznaczają się obszary podmokłe w ramach zasobu Sentinel-2 Global Land Cover, 
-       których udział procentowy wynosi odpowiednio 7% oraz 14%. W przypadku klasy pola uprawne dla aglomeracji największy błąd ma źródło Urban Atlas z niedoszacowaniem o 7,93%, natomiast dla miasta Poznań pola uprawne zostały przeszacowane przez Lucas o 5,60%. 
-       Udział procentowy obszarów uprawnych oraz obszarów wodnych dla wszystkich porównywanych źródeł na obszarze aglomeracji oraz miasta Poznań jest bardzo zbliżony do referencyjnych danych BDOT10k. 
+    <p class = "paragraf">
+    Największe różnice względem BDOT10k są dostrzegalne przede wszystkim w zbiorze CLC, który charakteryzuje się rozkładem przestrzennym uzyskanym z rozdzielczości dużo mniejszej od pozostałych - 100m. 
+    Wśród pozostałych zbiorów, najbardziej zauważalnymi różnicami odznaczają się Sentinel-2 Global Land Cover oraz Urban Atlas, które przeszacowują występowanie kolejno obszarów podmokłych oraz obszarów trawiastych i krzewiastych.
    </p>
 
       <div class = "maps" style = "float:none!important;margin-left:auto!important;margin-right:auto!important">
             <img class = "wydruk" style = "float:right" src = "strona/grafiki/mapy/bdot.png">
-            <p class = "maps_text">Ryc. 1 Baza danych obiektów topograficznych</p>
+            <p class = "maps_text">Ryc. 2 Baza danych obiektów topograficznych</p>
       </div>
 
       <span style = "clear:both;display:block"></span> 
 
       <div class = "maps">
             <img class = "wydruk" style = "float:right" src = "strona/grafiki/mapy/clc.png">
-            <p class = "maps_text">Ryc. 2 CORINE Land Cover</p>
+            <p class = "maps_text">Ryc. 3 CORINE Land Cover</p>
       </div>
       <div class = "maps">
         <img class = "wydruk" style = "float:right" src = "strona/grafiki/mapy/esa.png">
-        <p class = "maps_text">Ryc. 3 ESA WorldCover</p>
+        <p class = "maps_text">Ryc. 4 ESA WorldCover</p>
       </div>
 
       <span style = "clear:both;display:block"></span> 
 
       <div class = "maps">
             <img class = "wydruk" style = "float:right" src = "strona/grafiki/mapy/esri.png">
-            <p class = "maps_text">Ryc. 4 Esri Land Cover</p>
+            <p class = "maps_text">Ryc. 5 Esri Land Cover</p>
       </div>
       <div class = "maps">
         <img class = "wydruk" style = "float:right" src = "strona/grafiki/mapy/urban.png">
-        <p class = "maps_text">Ryc. 5 Urban Atlas</p>
+        <p class = "maps_text">Ryc. 6 Urban Atlas</p>
       </div>
 
       <span style = "clear:both;display:block"></span> 
 
       <div class = "maps">
             <img class = "wydruk" style = "float:left" src = "strona/grafiki/mapy/sentinel.png">
-            <p class = "maps_text">Ryc. 6 Sentinel-2 Global Land Cover</p>
+            <p class = "maps_text">Ryc. 7 Sentinel-2 Global Land Cover</p>
       </div>
       <div class = "maps">
         <img class = "wydruk" style = "float:right" src = "strona/grafiki/mapy/lucas.png">
-        <p class = "maps_text">Ryc. 7 LUCAS</p>
+        <p class = "maps_text">Ryc. 8 LUCAS</p>
   </div>
+  
+    <p class = "paragraf">
+    Procentowy udział klas dla każdego ze źródeł danych pozwala stwierdzić ich przeszacowanie bądź niedoszacowanie względem źródła danych BDOT10k.
+    Poziom zurbanizowania terenu miasta Poznań jest zdecydowanie większy w porównaniu do całej aglomeracji, jednak obszary zurbanizowane są klasą w większości przeszacowaną zarówno dla aglomeracji, jak i miasta Poznań.
+    W tym przypadku Esri Land Cover jest źródłem, które cechowało się największym przeszacowaniem udziału procentowego zabudowy, wynoszącym względem aglomeracji ok. 8%, natomiast dla miasta Poznań - ok. 22%.
+    Klasą charakteryzującą się największym niedoszacowaniem są obszary trawiaste i krzewiaste, sklasyfikowane w ramach źródła Esri Land Cover.
+    Jedną z klas, która osiągnęła bardzo zbliżone wartości względem referencyjnego źródła, są lasy - te jednak w przypadku źródła ESA WorldCover zostały w dużym stopniu przeszacowane o niemal 10% dla aglomeracji oraz o 24,42% dla miasta Poznań.
+    Największym przeszacowaniem na obszarze aglomeracji oraz miasta odznaczają się obszary podmokłe w ramach zasobu Sentinel-2 Global Land Cover, których udział procentowy wynosi odpowiednio 7% oraz 14%.
+    W przypadku klasy pola uprawne dla aglomeracji największy błąd ma źródło Urban Atlas z niedoszacowaniem o 7,93%, natomiast dla miasta Poznań pola uprawne zostały przeszacowane przez LUCAS o 5,60%.
+    Udział procentowy obszarów uprawnych oraz obszarów wodnych dla wszystkich porównywanych źródeł na obszarze aglomeracji oraz miasta Poznań jest bardzo zbliżony do referencyjnych danych BDOT10k.
+   </p>
       
     <iframe class = "wykres" style = "float:left" frameborder="0" scrolling="no" modebar = "false" src="strona/grafiki/wykresy_interaktywne/udzial_pokrycia_aglo.html"></iframe>
     <iframe class = "wykres"  style = "float:right" frameborder="0" scrolling="no" src="strona/grafiki/wykresy_interaktywne/udzial_pokrycia_poznan.html"></iframe>
@@ -159,16 +167,16 @@ Analizę porównawczą dokładności wszystkich źródeł danych oraz poszczegó
   </br></br>
      <h2>Zgodność z BDOT10k </h2>
 
-      <p class = "paragraf">Ze względu na specyfikację porównywanych źródeł danych oraz obszaru badań, 
-        możemy zaobserwować duże różnice w zgodności klasyfikacji tych samych obszarów względem źródła referencyjnego. 
-        Rycina 5 przedstawia liczbę źródeł pokrycia terenu i użytkowania ziemi, których to obszary zostały zaklasyfikowane poprawnie względem BDOT10k, wraz z udziałem procentowym. 
-        Przedstawiona mapa obrazuje przede wszystkim wpływ złożoności przestrzennej na poprawność reklasyfikacji przez wszystkie źródła pokrycia terenu i użytkowania ziemi – czym większe, 
-        jednolite obszary danej klasy, tym większa zgodność wszystkich zasobów. Największą zgodnością odznaczają się zatem obszerne tereny lasów oraz pól uprawnych.  
+      <p class = "paragraf">
+    Ze względu na specyfikację porównywanych źródeł danych oraz obszaru badań, możemy zaobserwować duże różnice w zgodności klasyfikacji tych samych obszarów względem źródła referencyjnego. 
+    Rycina 9 przedstawia liczbę źródeł pokrycia terenu i użytkowania ziemi, których to obszary zostały zaklasyfikowane poprawnie względem BDOT10k, wraz z udziałem procentowym. 
+    Przedstawiona mapa obrazuje przede wszystkim wpływ złożoności przestrzennej na poprawność reklasyfikacji przez wszystkie źródła pokrycia terenu i użytkowania ziemi – im większe, jednolite obszary danej klasy, tym większa zgodność wszystkich zasobów. 
+    Największą zgodnością odznaczają się zatem obszerne tereny lasów oraz pól uprawnych.  
       </p>
     </p>
   <div>
     <p style="text-align: center; width:100%;"><img id = "mapa_zgodnosci" src = "strona/grafiki/mapy/mapa_zgodnosc.png"></p>
-    <p style = "text-align:center; font-weight:150">Ryc. 1 Mapa kategorii pokrycia terenu</p>
+    <p style = "text-align:center; font-weight:150">Ryc. 9 Zgodność źródeł danych z BDOT10k</p>
    </div>
 
 
@@ -177,37 +185,33 @@ Analizę porównawczą dokładności wszystkich źródeł danych oraz poszczegó
 
          <span style = "clear:both;display:block"></span> 
 
-         <p class = "paragraf" style = "margin-top:80px">Ponad 50% obszarów całej aglomeracji zostało sklasyfikowanych poprawnie względem BDOT10k przez wszystkie 
-          pozostałe źródła pokrycia terenu i użytkowania ziemi – w przypadku miasta Poznań wartość ta wynosi jedynie ok. 35% (ryc. 6).  Obszary, w których pięć źródeł jest zgodnych z BDOT10k,
-           stanowią około 17% powierzchni dla aglomeracji, jak i również miasta Poznań. Zgodność dla czterech źródeł i mniej odznacza się stopniowym spadkiem - czym mniejsza liczba zasobów zgodnych z BDOT10k, 
-           tym stanowi ona coraz mniejszy udział procentowy powierzchni obu obszarów - aglomeracji oraz miasta. Żadne z porównywanych źródeł pokrycia terenu i użytkowania ziemi nie były zgodne z referencyjnym źródłem BDOT10k na ok. 
-           5% obszarów aglomeracji oraz ok. 8% w przypadku miasta Poznań.  
+         <p class = "paragraf" style = "margin-top:80px">
+    Ponad 50% obszarów całej aglomeracji zostało sklasyfikowanych poprawnie względem BDOT10k przez wszystkie pozostałe źródła pokrycia terenu i użytkowania ziemi – w przypadku miasta Poznań wartość ta wynosi jedynie ok. 35%.  
+    Obszary, w których pięć źródeł jest zgodnych z BDOT10k, stanowią około 17% powierzchni dla aglomeracji, jak i również miasta Poznań. 
+    Zgodność dla czterech i mniej źródeł odznacza się stopniowym spadkiem - czym mniejsza liczba zasobów zgodnych z BDOT10k, tym stanowi ona coraz mniejszy udział procentowy powierzchni obu obszarów - aglomeracji oraz miasta. 
+    Żadne z porównywanych źródeł pokrycia terenu i użytkowania ziemi nie były zgodne z referencyjnym źródłem BDOT10k na ok. 5% obszarów aglomeracji oraz ok. 8% w przypadku miasta Poznań.  
           </p>
-
 
      <span style = "clear:both;display:block"></span> 
 
   </br></br></br></br>
-     <h2>Porównanie dokładności klasyfikacji </h2>
-     <p class = "paragraf">W celu oceny jakości i dokładności każdego źródła pokrycia terenu, przeprowadzono analizę przy użyciu
-       macierzy przejść. Metoda ta pozwala na porównanie wyników klasyfikacji z danymi referencyjnymi - w tym przypadku z
-       Bazą Danych Obiektów Topograficznych (BDOT10k). Macierz błędów umożliwia określenie dokładności 
-       odwzorowania rzeczywistego stanu terenu oraz błędów i rozbieżności występujących w klasyfikacji.
-       W celu przedstawienia najbliższego pod względem dokładności klasyfikacji źródła pokrycia terenu, posłużono się proporcją
-       pikseli sklasyfikowanych poprawnie do liczby wszystkich występujących pikseli, a także wskaźnikiem Kappa - miarą
-       pozwalającą określić stopień zgodności pomiędzy reklasyfikacjami, uwzględniającą przypadkowe zgodności i błędy.
+     <h2>Porównanie dokładności klasyfikacji</h2>
+     <p class = "paragraf">
+    W celu oceny jakości i dokładności każdego źródła pokrycia terenu przeprowadzono analizę przy użyciu macierzy przejść.
+    Metoda ta pozwala na porównanie wyników klasyfikacji z danymi referencyjnymi - w tym przypadku z Bazą Danych Obiektów Topograficznych.
+    Macierz błędów umożliwia określenie dokładności odwzorowania rzeczywistego stanu terenu oraz błędów i rozbieżności występujących w klasyfikacji.
+    W celu przedstawienia najbliższego pod względem dokładności klasyfikacji źródła pokrycia terenu posłużono się proporcją pikseli sklasyfikowanych poprawnie do liczby wszystkich występujących pikseli, a także wskaźnikiem Kappa - miarą pozwalającą określić stopień zgodności pomiędzy reklasyfikacjami, uwzględniającą przypadkowe zgodności i błędy.
       </p>
 
-      <p class = "paragraf">Najdokładniejszym zasobem w obu obszarach (całej aglomeracji oraz mieście Poznań) okazał się LUCAS, 
-        o dokładności 0,80 i Kappa wynoszącym 0,73. Najsłabszym natomiast - Urban Atlas, z dokładnością i kappa wynoszącym odpowiednio 0,74 i 0,64.
-      Obszar miasta Poznania najdokładniej względem BDOT10k został sklasyfikowany przez ten sam zasób - Urban Atlas (dokładność: 0,71, Kappa: 0,6),
-      czyli projekt obejmujący pokrycie terenu głównie miejskich obszarów. Najmniej dokładnym zasobem w powiecie Poznań okazał się Sentinel-2 Global Land Cover,
-       o dokładności wynoszącej jedynie 0,63 i wskaźniku Kappa równym 0,53.
+      <p class = "paragraf">
+    Najdokładniejszym zasobem dla całej aglomeracji okazał się LUCAS, o dokładności 0,80 i Kappa wynoszącym 0,71. 
+    Najsłabszym natomiast - Urban Atlas, z dokładnością i Kappa wynoszącym odpowiednio 0,74 i 0,64. 
+    Obszar miasta Poznania najdokładniej względem BDOT10k został sklasyfikowany przez zasób Urban Atlas (dokładność: 0,71, Kappa: 0,6), czyli projekt obejmujący pokrycie terenu głównie miejskich obszarów.
+    Najmniej dokładnym zasobem w powiecie Poznań okazał się Sentinel-2 Global Land Cover, o dokładności wynoszącej jedynie 0,63 i wskaźniku Kappa równym 0,53.
     </p>
     
-  
     <p class='img_text' style = "text-align:center;">
-        <b>Tabela 1. Statystyki obu zmiennych w podziale na kategorię zagospodarowania terenu</b>
+        <b>Tabela 1. Dokładność oraz wskaźnik Kappa dla porównywanych źródeł</b>
     </p>
 
   <div id = "statystyki_tabela">
@@ -269,20 +273,17 @@ Analizę porównawczą dokładności wszystkich źródeł danych oraz poszczegó
       </table>
   </div>
 
-  <p class = "paragraf">Poza oceną dokładności wszystkich źródeł danych, przeanalizowano również poszczególne klasy 
-    pokrycia terenu każdego z nich. Poniżej przedstawiono procentowy udział niepoprawnie zaklasyfikowanych względem BDOT10k kategorii pokrycia terenu,
-    uzyskany na podstawie macierzy błędów (ryc. 6-7). W przypadku miasta Poznań, średnia błędu dla obszarów podmokłych nie obejmuje zasobu Urban Atlas, ze względu
-    na brak tej klasy występującej na obszarze powiatu Poznań.
+  <p class = "paragraf">
+    Poza oceną dokładności wszystkich źródeł danych, przeanalizowano również poszczególne klasy pokrycia terenu każdego z nich. Poniżej przedstawiono procentowy udział niepoprawnie zaklasyfikowanych względem BDOT10k kategorii pokrycia terenu, uzyskany na podstawie macierzy błędów. 
+    W przypadku miasta Poznań, średnia błędu dla obszarów podmokłych nie obejmuje zasobu Urban Atlas, ze względu na brak tej klasy występującej na obszarze powiatu Poznań.
   </p>
 
-  <p class = "paragraf">Klasą obarczoną największym błędem klasyfikacji, zarówno na terenie aglomeracji jak i miasta Poznań, są obszary podmokłe,
-  ze średnim błędem równym kolejno 0,65 i 0,73. Obszary podmokłe we wszystkich zbiorach zajmują pierwsze bądź drugie miejsce z największym procentem
-  powierzchni niepoprawnie sklasyfikowanej - to potwierdza tezę, iż jest to najtrudniejsza klasa do klasyfikacji bazującej na zdjęciach satelitarnych.
-  Kolejnymi klasami z dość dużymi błędami klasyfikacji są obszary trawiaste i krzewiaste, których 44,6 % powierzchni na obszarze aglomeracji oraz 31,7 %
-  w mieście Poznań zostało zaklasyfikowane niepoprawnie, a także zabudowa - kolejno 38 % i 31,2 %. Klasą o największej dokładności klasyfikacji względem
-  BDOT10k okazały się obszary wodne, ze średnim błędem wynoszącym 0,05 w przypadku miasta Poznań i 0,08 w przypadku aglomeracji. Ze względu na dość znaczące
-  pokrycie powiatu poznańskiego zajmowane przez lasy (ponad 25 % powiatu) oraz pola uprawne (44 %), a także przede wszystkim ich złożoność przestrzenną,
-  klasy te w przypadku aglomeracji również wyróżniają się niskim błędem klasyfikacji - odpowiednio jedynie 0,16 i 0,12.
+  <p class = "paragraf">
+    Klasą obarczoną największym błędem klasyfikacji, zarówno na terenie aglomeracji, jak i miasta Poznań, są obszary podmokłe, ze średnim błędem równym kolejno 0,65 i 0,73.
+    Obszary podmokłe we wszystkich zbiorach zajmują pierwsze bądź drugie miejsce z największym procentem powierzchni niepoprawnie sklasyfikowanej - to potwierdza tezę, iż jest to najtrudniejsza klasa do klasyfikacji bazującej na zdjęciach satelitarnych.
+    Kolejnymi klasami z dość dużymi błędami klasyfikacji są obszary trawiaste i krzewiaste, których 44,6% powierzchni na obszarze aglomeracji oraz 31,7% w mieście Poznań zostało zaklasyfikowane niepoprawnie, a także zabudowa - kolejno 38% i 31,2%.
+    Klasą o największej dokładności klasyfikacji względem BDOT10k okazały się obszary wodne, ze średnim błędem wynoszącym 0,05 w przypadku miasta Poznań i 0,08 w przypadku aglomeracji.
+    Ze względu na dość znaczące pokrycie powiatu poznańskiego zajmowane przez lasy (ponad 25% powiatu) oraz pola uprawne (44%), a także przede wszystkim ich złożoność przestrzenną, klasy te w przypadku aglomeracji również wyróżniają się niskim błędem klasyfikacji - odpowiednio jedynie 0,16 i 0,12.
   </p>
 
 
@@ -290,16 +291,13 @@ Analizę porównawczą dokładności wszystkich źródeł danych oraz poszczegó
   <iframe class = "wykres"  style = "float:right" frameborder="0" scrolling="no" src="strona/grafiki/wykresy_interaktywne/error_poznan.html"></iframe>
 
      <span style = "clear:both;display:block"></span> 
-  <p class = "paragraf">W celu przedstawienia szczegółowych statystyk zgodności poszczególnych klas pokrycia terenu dla każdego źródła, na
-     podstawie macierzy przejść obliczono precyzję (ang. <em>precision</em>), czułość (ang. <em>recall</em>), a także wskaźnik F1 (ang. <em>F1 - score</em>). Precyzja
-     odnosi się do procentu obszarów, w jakim dana klasa źródła danych zgadza się z tą samą klasą źródła referencyjnego (BDOT10k) - czułość
-     natomiast określa procent, w jakim dana klasa źródła referencyjnego (BDOT10k) zgadza się z tą samą klasą źródła danych. Wskaźnik F1 to
-     średnia harmoniczna pomiędzy precyzją i czułością - im jego wartość jest większa, tym lepsze odwzorowanie danej klasyfikacji względem źródła referencyjnego.
+  <p class = "paragraf">
+    W celu przedstawienia szczegółowych statystyk zgodności poszczególnych klas pokrycia terenu dla każdego źródła, na podstawie macierzy przejść obliczono precyzję (ang. <em>precision</em>), czułość (ang. <em>recall</em>), a także wskaźnik F1 (ang. <em>F1 - score</em>). 
+    Precyzja odnosi się do procentu obszarów, w jakim dana klasa źródła danych zgadza się z tą samą klasą źródła referencyjnego (BDOT10k) - czułość natomiast określa procent, w jakim dana klasa źródła referencyjnego (BDOT10k) zgadza się z tą samą klasą źródła danych. 
+    Wskaźnik F1 to średnia harmoniczna pomiędzy precyzją i czułością - im jego wartość jest większa, tym lepsze odwzorowanie danej klasyfikacji względem źródła referencyjnego.
     </p> 
   </div>
 
-  
- 
   <p class='img_text' style = "text-align:center;"><b>Tabela 2. Statystyki dla aglomeracji</b></p> 
  
   <div id = "statystyki_tabela">
@@ -626,20 +624,34 @@ Analizę porównawczą dokładności wszystkich źródeł danych oraz poszczegó
 <div class = "w3-row-padding w3-padding-32 w3-container w3-content" style = "max-width:1100px">
   <h1>Wnioski i podsumowanie</h1>
 
-<p class = "paragraf">W pracy przeanalizowano dokładność 6 różnych zbiorów danych na obszarze miasta Poznań i całej aglomeracji oraz porównano uzyskane wyniki względem najdokładniejszego źródła pokrycia terenu i użytkowania ziemi dostępnego w Polsce – Bazy Danych Obiektów Topograficznych (BDOT10k). Wybrany obszar badań umożliwił szczegółowe zbadanie zgodności oraz dokładności klasy
-   każdego ze źródeł danych z klasą referencyjną zasobu BDOT10k dla dwóch zróżnicowanych terenów - dużego miasta oraz całej aglomeracji obejmującej powiat Poznań i powiat poznański, charakteryzujący się poza miastem w większości terenami leśnymi oraz rolniczymi. Uzyskane wyniki charakteryzują się mniejszą zgodnością poszczególnych zasobów danych z BDOT10k oraz dokładnością źródeł na obszarze
-    miasta Poznań, na terenie całej aglomeracji miary te przyjmują natomiast wyższe wartości. Najdokładniejszym źródłem pokrycia terenu i użytkowania ziemi na terenie miasta okazał się Urban Atlas, na obszarze aglomeracji natomiast – LUCAS. Warto zauważyć, iż w przypadku miasta Poznań zbiór LUCAS był drugim najdokładniejszym zbiorem i o jedynie punkt procentowy mniej dokładnym od Urban Atlas – ten
-     natomiast w przypadku aglomeracji plasuje się na ostatnim miejscu. Powyższe wyniki ukazują dość dobry stopień dokładności na terenie Poznania zbioru Urban Atlas, który ze względu na swoją specyfikę oraz rozdzielczość jest dedykowany dla obszarów miejskich. Bardzo dobra dokładność na obu badanych obszarach uzyskana przez projekt LUCAS może wskazywać na przydatność informacji uzyskanych w terenie
-      przez rachmistrzów oraz ich wpływ na zwiększenie dokładności, a co za tym idzie – bardziej szczegółowych informacji odnośnie rzeczywistego pokrycia. 
+<p class = "paragraf">
+    W pracy przeanalizowano dokładność 6 różnych zbiorów danych na obszarze miasta Poznań i całej aglomeracji oraz porównano uzyskane wyniki względem najdokładniejszego źródła pokrycia terenu i użytkowania ziemi dostępnego w Polsce – Bazy Danych Obiektów Topograficznych (BDOT10k). 
+    Wybrany obszar badań umożliwił szczegółowe zbadanie zgodności oraz dokładności klasy każdego ze źródeł danych z klasą referencyjną zasobu BDOT10k dla dwóch zróżnicowanych terenów - dużego miasta oraz całej aglomeracji obejmującej powiat Poznań i powiat poznański, charakteryzujący się poza miastem w większości terenami leśnymi oraz rolniczymi. 
+    Uzyskane wyniki charakteryzują się mniejszą zgodnością poszczególnych zasobów danych z BDOT10k oraz dokładnością źródeł na obszarze miasta Poznań, na terenie całej aglomeracji miary te przyjmują natomiast wyższe wartości. 
+    Najdokładniejszym źródłem pokrycia terenu i użytkowania ziemi na terenie miasta okazał się Urban Atlas, na obszarze aglomeracji natomiast – LUCAS. 
+    Warto zauważyć, iż w przypadku miasta Poznań zbiór LUCAS był drugim najdokładniejszym zbiorem i o jedynie punkt procentowy mniej dokładnym od Urban Atlas – ten natomiast w przypadku aglomeracji plasuje się na ostatnim miejscu. 
+     Powyższe wyniki ukazują dość dobry stopień dokładności na terenie Poznania zbioru Urban Atlas, który ze względu na swoją specyfikę jest dedykowany dla obszarów miejskich. 
+     Bardzo dobra dokładność na obu badanych obszarach uzyskana przez projekt LUCAS może wskazywać na przydatność informacji uzyskanych w terenie przez rachmistrzów oraz ich wpływ na zwiększenie dokładności, a co za tym idzie – bardziej szczegółowych informacji odnośnie rzeczywistego pokrycia. 
   <br><br></p> 
 
-  <p class = "paragraf"> Dokładność poszczególnych klas pokrycia terenu i użytkowania ziemi dla każdego zbioru danych jest dość zróżnicowana, jednak w większości przypadków klasy najmniej oraz najbardziej dokładne względem BDOT10k są ze sobą zgodne w każdym z porównywanych zbiorów. Na obu badanych obszarach w 4 z 6 zbiorów danych – CLC, Esri Land Cover, LUCAS oraz Sentinel-2 Global Land Cover, najmniej dokładną klasą są obszary podmokłe. Otrzymane wyniki potwierdzają fakt, iż ich w pełni poprawna klasyfikacja ze zdjęć satelitarnych jest niezwykle trudna, co jest zauważalne na przykładzie zajmowanej powierzchni klas zaklasyfikowanych niepoprawnie dla każdego zbioru danych (ryc. 7). Zarówno na obszarze aglomeracji, jak i samego miasta Poznań, najdokładniejszą klasą pokrycia terenu i użytkowania ziemi okazały się obszary wodne – w przypadku całej aglomeracji podobnymi wynikami odznaczyły się również pola uprawne. 
+  <p class = "paragraf">
+    Dokładność poszczególnych klas pokrycia terenu i użytkowania ziemi dla każdego zbioru danych jest dość zróżnicowana, jednak w większości przypadków klasy najmniej oraz najdokładniejsze względem BDOT10k są ze sobą zgodne w każdym z porównywanych zbiorów.
+    Na obu badanych obszarach w 4 z 6 zbiorów danych – CLC, Esri Land Cover, LUCAS oraz Sentinel-2 Global Land Cover, najmniej dokładną klasą są obszary podmokłe.
+    Otrzymane wyniki potwierdzają fakt, iż ich w pełni poprawna klasyfikacja ze zdjęć satelitarnych jest niezwykle trudna, co jest zauważalne na przykładzie zajmowanej powierzchni klas zaklasyfikowanych niepoprawnie dla każdego zbioru danych.
+    Zarówno na obszarze aglomeracji, jak i samego miasta Poznań, najdokładniejszą klasą pokrycia terenu i użytkowania ziemi okazały się obszary wodne – w przypadku całej aglomeracji podobnymi wynikami odznaczyły się również pola uprawne.
      <br><br> </p>
 
-     <p class = "paragraf"> Szacunkową zgodność oraz dokładność względem BDOT10k można zauważyć analizując jedynie mapy tematyczne przedstawiające rozkład kategorii pokrycia terenu i użytkowania ziemi po reklasyfikacji (ryc. 3), a także mapę przedstawiającą liczbę źródeł zgodnych z BDOT10k (ryc. 5). Na obie wartości, oprócz samego sposobu reklasyfikacji do wspólnych klas, wpływa przede wszystkim rozdzielczość oraz przeznaczenie danego zbioru danych – lokalne lub globalne. Oprócz tego występuje zdecydowana zależność pomiędzy zgodnością i dokładnością klas a konfiguracją i kompozycją krajobrazu – przede wszystkim różnorodnością i zwartością klas. Powiat poznański charakteryzuje się występowaniem większych płatów mniejszej ilości klas w stosunku do miasta Poznań – wpływa to na znacznie większą zgodność i dokładność wszystkich źródeł oraz klas na obszarze całej aglomeracji.  
+     <p class = "paragraf">
+    Szacunkową zgodność oraz dokładność względem BDOT10k można zauważyć analizując jedynie mapy tematyczne przedstawiające rozkład kategorii pokrycia terenu i użytkowania ziemi po reklasyfikacji, a także mapę przedstawiającą liczbę źródeł zgodnych z BDOT10k. 
+    Na obie wartości, oprócz samego sposobu reklasyfikacji do wspólnych klas, wpływa przede wszystkim rozdzielczość oraz przeznaczenie danego zbioru danych – lokalne lub globalne. 
+    Oprócz tego występuje zdecydowana zależność pomiędzy zgodnością i dokładnością klas a konfiguracją i kompozycją krajobrazu – przede wszystkim różnorodnością i zwartością klas. 
+    Powiat poznański charakteryzuje się występowaniem większych płatów mniejszej ilości klas w stosunku do miasta Poznań – wpływa to na znacznie większą zgodność i dokładność wszystkich źródeł oraz klas na obszarze całej aglomeracji.
        <br><br> </p>
 
-       <p class = "paragraf"> Ocena dokładności źródeł pokrycia terenu i użytkowania ziemi jest zależna przede wszystkim od poprawności reklasyfikacji kategorii poszczególnych zbiorów i próbie ujednolicenia wszystkich z nich do kilku wybranych, głównych klas. Otrzymane wyniki są jedynie przybliżeniem rzeczywistej dokładności zbiorów danych i wynikają od subiektywnej klasyfikacji kategorii pokrycia terenu i użytkowania ziemi, opartej na sugerowanej agregacji klas według dokumentacji poszczególnych zbiorów danych. Powyższa analiza może zostać wykorzystana do wyboru najbardziej użytecznego zbioru danych na poziomie lokalnym w innych opracowaniach, a także przyczynić się do rozszerzenia badań w kierunku porównania dokładności klas pokrycia terenu i użytkowania ziemi z metrykami krajobrazowymi. 
+       <p class = "paragraf">
+    Ocena dokładności źródeł pokrycia terenu i użytkowania ziemi jest zależna przede wszystkim od poprawności reklasyfikacji kategorii poszczególnych zbiorów i próbie ujednolicenia wszystkich z nich do kilku wybranych, głównych klas.
+    Otrzymane wyniki są jedynie przybliżeniem rzeczywistej dokładności zbiorów danych i wynikają z subiektywnej klasyfikacji kategorii pokrycia terenu i użytkowania ziemi, opartej na sugerowanej agregacji klas według dokumentacji poszczególnych zbiorów danych.
+    Powyższa analiza może zostać wykorzystana do wyboru najbardziej użytecznego zbioru danych na poziomie lokalnym w innych opracowaniach, a także przyczynić się do rozszerzenia badań w kierunku porównania dokładności klas pokrycia terenu i użytkowania ziemi z metrykami krajobrazowymi.
          <br><br> </p>
 
  </div>
@@ -648,7 +660,7 @@ Analizę porównawczą dokładności wszystkich źródeł danych oraz poszczegó
 </div>
 
 <footer id = "footer" class = "w3-xlarge  w3-container w3-center w3-padding-32 w3-opacity-min">
-  © Sekcja Geoinformacji 2022
+  © Sekcja Geoinformacji 2024
 <div class = "w3-padding-32">
   <a href = "https://www.facebook.com/SekcjaGeoinformacjiUam/" target="_blank">
     <i class = "fa fa-facebook-official w3-opacity-off w3-xxlarge w3-margin-right w3-hover-opacity"></i>
